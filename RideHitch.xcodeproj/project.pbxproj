@@ -1,0 +1,530 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		21E2E24D1E131437000AAFD2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E2E24C1E131437000AAFD2 /* AppDelegate.swift */; };
+		21E2E2521E131437000AAFD2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21E2E2501E131437000AAFD2 /* Main.storyboard */; };
+		21E2E2541E131437000AAFD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21E2E2531E131437000AAFD2 /* Assets.xcassets */; };
+		21E2E2571E131437000AAFD2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21E2E2551E131437000AAFD2 /* LaunchScreen.storyboard */; };
+		21E2E2671E131463000AAFD2 /* AWSAPIGateway.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21E2E2601E131463000AAFD2 /* AWSAPIGateway.framework */; };
+		21E2E2681E131463000AAFD2 /* AWSCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21E2E2611E131463000AAFD2 /* AWSCore.framework */; };
+		21E2E2691E131463000AAFD2 /* AWSDynamoDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21E2E2621E131463000AAFD2 /* AWSDynamoDB.framework */; };
+		21E2E26A1E131463000AAFD2 /* CheckXcodeVersion.sh in Resources */ = {isa = PBXBuildFile; fileRef = 21E2E2631E131463000AAFD2 /* CheckXcodeVersion.sh */; };
+		21E2E26B1E131463000AAFD2 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21E2E2651E131463000AAFD2 /* FBSDKCoreKit.framework */; };
+		21E2E26C1E131463000AAFD2 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21E2E2661E131463000AAFD2 /* FBSDKLoginKit.framework */; };
+		21E2E26D1E131489000AAFD2 /* AWSAPIGateway.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21E2E2601E131463000AAFD2 /* AWSAPIGateway.framework */; };
+		21E2E26E1E131489000AAFD2 /* AWSAPIGateway.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 21E2E2601E131463000AAFD2 /* AWSAPIGateway.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		21E2E26F1E131489000AAFD2 /* AWSCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21E2E2611E131463000AAFD2 /* AWSCore.framework */; };
+		21E2E2701E131489000AAFD2 /* AWSCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 21E2E2611E131463000AAFD2 /* AWSCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		21E2E2711E131489000AAFD2 /* AWSDynamoDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21E2E2621E131463000AAFD2 /* AWSDynamoDB.framework */; };
+		21E2E2721E131489000AAFD2 /* AWSDynamoDB.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 21E2E2621E131463000AAFD2 /* AWSDynamoDB.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		21E2E2731E131489000AAFD2 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21E2E2651E131463000AAFD2 /* FBSDKCoreKit.framework */; };
+		21E2E2741E131489000AAFD2 /* FBSDKCoreKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 21E2E2651E131463000AAFD2 /* FBSDKCoreKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		21E2E2751E131489000AAFD2 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21E2E2661E131463000AAFD2 /* FBSDKLoginKit.framework */; };
+		21E2E2761E131489000AAFD2 /* FBSDKLoginKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 21E2E2661E131463000AAFD2 /* FBSDKLoginKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		21E2E2881E1314B8000AAFD2 /* AWSAPI_03RMTZMV63_RequestSchema.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E2E27C1E1314B8000AAFD2 /* AWSAPI_03RMTZMV63_RequestSchema.m */; };
+		21E2E2891E1314B8000AAFD2 /* AWSAPI_03RMTZMV63_ResponseSchema.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E2E27E1E1314B8000AAFD2 /* AWSAPI_03RMTZMV63_ResponseSchema.m */; };
+		21E2E28A1E1314B8000AAFD2 /* AWSAPI_03RMTZMV63_RiderPolygonFinderMobileHubClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E2E2801E1314B8000AAFD2 /* AWSAPI_03RMTZMV63_RiderPolygonFinderMobileHubClient.m */; };
+		21E2E28B1E1314B8000AAFD2 /* AWSConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E2E2811E1314B8000AAFD2 /* AWSConfiguration.swift */; };
+		21E2E28C1E1314B8000AAFD2 /* AWSMobileClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E2E2821E1314B8000AAFD2 /* AWSMobileClient.swift */; };
+		21E2E28D1E1314B8000AAFD2 /* AWSMobileHubHelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21E2E2831E1314B8000AAFD2 /* AWSMobileHubHelper.framework */; };
+		21E2E28E1E1314B8000AAFD2 /* TripTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E2E2871E1314B8000AAFD2 /* TripTable.swift */; };
+		21E2E2911E131590000AAFD2 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 21E2E2901E131590000AAFD2 /* libz.tbd */; };
+		21E2E2931E13159B000AAFD2 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 21E2E2921E13159B000AAFD2 /* libsqlite3.tbd */; };
+		21E2E2951E1315E5000AAFD2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E2E2941E1315E5000AAFD2 /* LoginViewController.swift */; };
+		21E2E2971E131646000AAFD2 /* AWSCognitoIdentityProvider.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21E2E2961E131646000AAFD2 /* AWSCognitoIdentityProvider.framework */; };
+		21E2E2981E131646000AAFD2 /* AWSCognitoIdentityProvider.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 21E2E2961E131646000AAFD2 /* AWSCognitoIdentityProvider.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		21E2E2771E13148A000AAFD2 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				21E2E26E1E131489000AAFD2 /* AWSAPIGateway.framework in Embed Frameworks */,
+				21E2E2981E131646000AAFD2 /* AWSCognitoIdentityProvider.framework in Embed Frameworks */,
+				21E2E2741E131489000AAFD2 /* FBSDKCoreKit.framework in Embed Frameworks */,
+				21E2E2761E131489000AAFD2 /* FBSDKLoginKit.framework in Embed Frameworks */,
+				21E2E2721E131489000AAFD2 /* AWSDynamoDB.framework in Embed Frameworks */,
+				21E2E2701E131489000AAFD2 /* AWSCore.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		21E2E2491E131437000AAFD2 /* RideHitch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RideHitch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		21E2E24C1E131437000AAFD2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		21E2E2511E131437000AAFD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		21E2E2531E131437000AAFD2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		21E2E2561E131437000AAFD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		21E2E2581E131437000AAFD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		21E2E2601E131463000AAFD2 /* AWSAPIGateway.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSAPIGateway.framework; sourceTree = "<group>"; };
+		21E2E2611E131463000AAFD2 /* AWSCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSCore.framework; sourceTree = "<group>"; };
+		21E2E2621E131463000AAFD2 /* AWSDynamoDB.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSDynamoDB.framework; sourceTree = "<group>"; };
+		21E2E2631E131463000AAFD2 /* CheckXcodeVersion.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = CheckXcodeVersion.sh; sourceTree = "<group>"; };
+		21E2E2651E131463000AAFD2 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		21E2E2661E131463000AAFD2 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		21E2E27B1E1314B8000AAFD2 /* AWSAPI_03RMTZMV63_RequestSchema.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AWSAPI_03RMTZMV63_RequestSchema.h; sourceTree = "<group>"; };
+		21E2E27C1E1314B8000AAFD2 /* AWSAPI_03RMTZMV63_RequestSchema.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AWSAPI_03RMTZMV63_RequestSchema.m; sourceTree = "<group>"; };
+		21E2E27D1E1314B8000AAFD2 /* AWSAPI_03RMTZMV63_ResponseSchema.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AWSAPI_03RMTZMV63_ResponseSchema.h; sourceTree = "<group>"; };
+		21E2E27E1E1314B8000AAFD2 /* AWSAPI_03RMTZMV63_ResponseSchema.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AWSAPI_03RMTZMV63_ResponseSchema.m; sourceTree = "<group>"; };
+		21E2E27F1E1314B8000AAFD2 /* AWSAPI_03RMTZMV63_RiderPolygonFinderMobileHubClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AWSAPI_03RMTZMV63_RiderPolygonFinderMobileHubClient.h; sourceTree = "<group>"; };
+		21E2E2801E1314B8000AAFD2 /* AWSAPI_03RMTZMV63_RiderPolygonFinderMobileHubClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AWSAPI_03RMTZMV63_RiderPolygonFinderMobileHubClient.m; sourceTree = "<group>"; };
+		21E2E2811E1314B8000AAFD2 /* AWSConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AWSConfiguration.swift; sourceTree = "<group>"; };
+		21E2E2821E1314B8000AAFD2 /* AWSMobileClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AWSMobileClient.swift; sourceTree = "<group>"; };
+		21E2E2831E1314B8000AAFD2 /* AWSMobileHubHelper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSMobileHubHelper.framework; sourceTree = "<group>"; };
+		21E2E2841E1314B8000AAFD2 /* Bridging_Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bridging_Header.h; sourceTree = "<group>"; };
+		21E2E2871E1314B8000AAFD2 /* TripTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripTable.swift; sourceTree = "<group>"; };
+		21E2E2901E131590000AAFD2 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		21E2E2921E13159B000AAFD2 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		21E2E2941E1315E5000AAFD2 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		21E2E2961E131646000AAFD2 /* AWSCognitoIdentityProvider.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AWSCognitoIdentityProvider.framework; path = ../../../AWSCognitoIdentityProvider.framework; sourceTree = "<group>"; };
+		21E2E29C1E141EA5000AAFD2 /* RideHitch.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RideHitch.entitlements; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		21E2E2461E131437000AAFD2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				21E2E2931E13159B000AAFD2 /* libsqlite3.tbd in Frameworks */,
+				21E2E2911E131590000AAFD2 /* libz.tbd in Frameworks */,
+				21E2E26D1E131489000AAFD2 /* AWSAPIGateway.framework in Frameworks */,
+				21E2E2971E131646000AAFD2 /* AWSCognitoIdentityProvider.framework in Frameworks */,
+				21E2E26F1E131489000AAFD2 /* AWSCore.framework in Frameworks */,
+				21E2E2751E131489000AAFD2 /* FBSDKLoginKit.framework in Frameworks */,
+				21E2E2711E131489000AAFD2 /* AWSDynamoDB.framework in Frameworks */,
+				21E2E2671E131463000AAFD2 /* AWSAPIGateway.framework in Frameworks */,
+				21E2E26B1E131463000AAFD2 /* FBSDKCoreKit.framework in Frameworks */,
+				21E2E26C1E131463000AAFD2 /* FBSDKLoginKit.framework in Frameworks */,
+				21E2E2691E131463000AAFD2 /* AWSDynamoDB.framework in Frameworks */,
+				21E2E28D1E1314B8000AAFD2 /* AWSMobileHubHelper.framework in Frameworks */,
+				21E2E2731E131489000AAFD2 /* FBSDKCoreKit.framework in Frameworks */,
+				21E2E2681E131463000AAFD2 /* AWSCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		21E2E2401E131437000AAFD2 = {
+			isa = PBXGroup;
+			children = (
+				21E2E24B1E131437000AAFD2 /* RideHitch */,
+				21E2E24A1E131437000AAFD2 /* Products */,
+				21E2E28F1E13158F000AAFD2 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		21E2E24A1E131437000AAFD2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				21E2E2491E131437000AAFD2 /* RideHitch.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		21E2E24B1E131437000AAFD2 /* RideHitch */ = {
+			isa = PBXGroup;
+			children = (
+				21E2E29C1E141EA5000AAFD2 /* RideHitch.entitlements */,
+				21E2E24C1E131437000AAFD2 /* AppDelegate.swift */,
+				21E2E2941E1315E5000AAFD2 /* LoginViewController.swift */,
+				21E2E2501E131437000AAFD2 /* Main.storyboard */,
+				21E2E2531E131437000AAFD2 /* Assets.xcassets */,
+				21E2E2551E131437000AAFD2 /* LaunchScreen.storyboard */,
+				21E2E2991E1316BE000AAFD2 /* AWS */,
+				21E2E2581E131437000AAFD2 /* Info.plist */,
+			);
+			path = RideHitch;
+			sourceTree = "<group>";
+		};
+		21E2E25E1E131463000AAFD2 /* Sdk */ = {
+			isa = PBXGroup;
+			children = (
+				21E2E25F1E131463000AAFD2 /* Aws */,
+				21E2E2631E131463000AAFD2 /* CheckXcodeVersion.sh */,
+				21E2E2641E131463000AAFD2 /* Facebook */,
+			);
+			path = Sdk;
+			sourceTree = "<group>";
+		};
+		21E2E25F1E131463000AAFD2 /* Aws */ = {
+			isa = PBXGroup;
+			children = (
+				21E2E2961E131646000AAFD2 /* AWSCognitoIdentityProvider.framework */,
+				21E2E2601E131463000AAFD2 /* AWSAPIGateway.framework */,
+				21E2E2611E131463000AAFD2 /* AWSCore.framework */,
+				21E2E2621E131463000AAFD2 /* AWSDynamoDB.framework */,
+			);
+			path = Aws;
+			sourceTree = "<group>";
+		};
+		21E2E2641E131463000AAFD2 /* Facebook */ = {
+			isa = PBXGroup;
+			children = (
+				21E2E2651E131463000AAFD2 /* FBSDKCoreKit.framework */,
+				21E2E2661E131463000AAFD2 /* FBSDKLoginKit.framework */,
+			);
+			path = Facebook;
+			sourceTree = "<group>";
+		};
+		21E2E2791E1314B8000AAFD2 /* AmazonAws */ = {
+			isa = PBXGroup;
+			children = (
+				21E2E27A1E1314B8000AAFD2 /* Api */,
+				21E2E2811E1314B8000AAFD2 /* AWSConfiguration.swift */,
+				21E2E2821E1314B8000AAFD2 /* AWSMobileClient.swift */,
+				21E2E2831E1314B8000AAFD2 /* AWSMobileHubHelper.framework */,
+				21E2E2841E1314B8000AAFD2 /* Bridging_Header.h */,
+				21E2E2851E1314B8000AAFD2 /* Models */,
+			);
+			path = AmazonAws;
+			sourceTree = "<group>";
+		};
+		21E2E27A1E1314B8000AAFD2 /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				21E2E27B1E1314B8000AAFD2 /* AWSAPI_03RMTZMV63_RequestSchema.h */,
+				21E2E27C1E1314B8000AAFD2 /* AWSAPI_03RMTZMV63_RequestSchema.m */,
+				21E2E27D1E1314B8000AAFD2 /* AWSAPI_03RMTZMV63_ResponseSchema.h */,
+				21E2E27E1E1314B8000AAFD2 /* AWSAPI_03RMTZMV63_ResponseSchema.m */,
+				21E2E27F1E1314B8000AAFD2 /* AWSAPI_03RMTZMV63_RiderPolygonFinderMobileHubClient.h */,
+				21E2E2801E1314B8000AAFD2 /* AWSAPI_03RMTZMV63_RiderPolygonFinderMobileHubClient.m */,
+			);
+			path = Api;
+			sourceTree = "<group>";
+		};
+		21E2E2851E1314B8000AAFD2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				21E2E2861E1314B8000AAFD2 /* NoSQL */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		21E2E2861E1314B8000AAFD2 /* NoSQL */ = {
+			isa = PBXGroup;
+			children = (
+				21E2E2871E1314B8000AAFD2 /* TripTable.swift */,
+			);
+			path = NoSQL;
+			sourceTree = "<group>";
+		};
+		21E2E28F1E13158F000AAFD2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				21E2E2921E13159B000AAFD2 /* libsqlite3.tbd */,
+				21E2E2901E131590000AAFD2 /* libz.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		21E2E2991E1316BE000AAFD2 /* AWS */ = {
+			isa = PBXGroup;
+			children = (
+				21E2E2791E1314B8000AAFD2 /* AmazonAws */,
+				21E2E25E1E131463000AAFD2 /* Sdk */,
+			);
+			name = AWS;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		21E2E2481E131437000AAFD2 /* RideHitch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 21E2E25B1E131437000AAFD2 /* Build configuration list for PBXNativeTarget "RideHitch" */;
+			buildPhases = (
+				21E2E2451E131437000AAFD2 /* Sources */,
+				21E2E2461E131437000AAFD2 /* Frameworks */,
+				21E2E2471E131437000AAFD2 /* Resources */,
+				21E2E2771E13148A000AAFD2 /* Embed Frameworks */,
+				21E2E2781E13149F000AAFD2 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RideHitch;
+			productName = RideHitch;
+			productReference = 21E2E2491E131437000AAFD2 /* RideHitch.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		21E2E2411E131437000AAFD2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Andrew Roach";
+				TargetAttributes = {
+					21E2E2481E131437000AAFD2 = {
+						CreatedOnToolsVersion = 8.2;
+						DevelopmentTeam = P44AL382B9;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = 21E2E2441E131437000AAFD2 /* Build configuration list for PBXProject "RideHitch" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 21E2E2401E131437000AAFD2;
+			productRefGroup = 21E2E24A1E131437000AAFD2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				21E2E2481E131437000AAFD2 /* RideHitch */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		21E2E2471E131437000AAFD2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				21E2E26A1E131463000AAFD2 /* CheckXcodeVersion.sh in Resources */,
+				21E2E2571E131437000AAFD2 /* LaunchScreen.storyboard in Resources */,
+				21E2E2541E131437000AAFD2 /* Assets.xcassets in Resources */,
+				21E2E2521E131437000AAFD2 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		21E2E2781E13149F000AAFD2 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "bash \"${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSCore.framework/strip-frameworks.sh\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		21E2E2451E131437000AAFD2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				21E2E2891E1314B8000AAFD2 /* AWSAPI_03RMTZMV63_ResponseSchema.m in Sources */,
+				21E2E28E1E1314B8000AAFD2 /* TripTable.swift in Sources */,
+				21E2E2881E1314B8000AAFD2 /* AWSAPI_03RMTZMV63_RequestSchema.m in Sources */,
+				21E2E28C1E1314B8000AAFD2 /* AWSMobileClient.swift in Sources */,
+				21E2E2951E1315E5000AAFD2 /* LoginViewController.swift in Sources */,
+				21E2E24D1E131437000AAFD2 /* AppDelegate.swift in Sources */,
+				21E2E28B1E1314B8000AAFD2 /* AWSConfiguration.swift in Sources */,
+				21E2E28A1E1314B8000AAFD2 /* AWSAPI_03RMTZMV63_RiderPolygonFinderMobileHubClient.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		21E2E2501E131437000AAFD2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				21E2E2511E131437000AAFD2 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		21E2E2551E131437000AAFD2 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				21E2E2561E131437000AAFD2 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		21E2E2591E131437000AAFD2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		21E2E25A1E131437000AAFD2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		21E2E25C1E131437000AAFD2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = RideHitch/RideHitch.entitlements;
+				DEVELOPMENT_TEAM = P44AL382B9;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/RideHitch/Sdk/Aws",
+					"$(PROJECT_DIR)/RideHitch/Sdk/Facebook",
+					"$(PROJECT_DIR)/RideHitch/AmazonAws",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = RideHitch/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = awesomeApps.RideHitch;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/andrewroach/Library/Mobile Documents/com~apple~CloudDocs/Documents/Programming /Git Projects/RideHitch/RideHitch/AmazonAws/Bridging_Header.h";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		21E2E25D1E131437000AAFD2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = RideHitch/RideHitch.entitlements;
+				DEVELOPMENT_TEAM = P44AL382B9;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/RideHitch/Sdk/Aws",
+					"$(PROJECT_DIR)/RideHitch/Sdk/Facebook",
+					"$(PROJECT_DIR)/RideHitch/AmazonAws",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = RideHitch/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = awesomeApps.RideHitch;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/andrewroach/Library/Mobile Documents/com~apple~CloudDocs/Documents/Programming /Git Projects/RideHitch/RideHitch/AmazonAws/Bridging_Header.h";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		21E2E2441E131437000AAFD2 /* Build configuration list for PBXProject "RideHitch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				21E2E2591E131437000AAFD2 /* Debug */,
+				21E2E25A1E131437000AAFD2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		21E2E25B1E131437000AAFD2 /* Build configuration list for PBXNativeTarget "RideHitch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				21E2E25C1E131437000AAFD2 /* Debug */,
+				21E2E25D1E131437000AAFD2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 21E2E2411E131437000AAFD2 /* Project object */;
+}

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0CCC6B043F5A0A9664905071 /* Pods_RideHitch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4EE7E0EE76BF4B1B54098EB /* Pods_RideHitch.framework */; };
 		21E2E24D1E131437000AAFD2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E2E24C1E131437000AAFD2 /* AppDelegate.swift */; };
 		21E2E2521E131437000AAFD2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21E2E2501E131437000AAFD2 /* Main.storyboard */; };
 		21E2E2541E131437000AAFD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21E2E2531E131437000AAFD2 /* Assets.xcassets */; };
@@ -97,6 +98,9 @@
 		21E2E29F1E143EFF000AAFD2 /* TripsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripsViewController.swift; sourceTree = "<group>"; };
 		21E2E2A21E144FF0000AAFD2 /* ButtonTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonTableViewCell.swift; sourceTree = "<group>"; };
 		21E2E2A41E145564000AAFD2 /* AddTripWithMapVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTripWithMapVC.swift; sourceTree = "<group>"; };
+		A306E1412D75C78CA5CAB0D1 /* Pods-RideHitch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RideHitch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RideHitch/Pods-RideHitch.debug.xcconfig"; sourceTree = "<group>"; };
+		D4EE7E0EE76BF4B1B54098EB /* Pods_RideHitch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RideHitch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED7EF10F14D145027A83EE68 /* Pods-RideHitch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RideHitch.release.xcconfig"; path = "Pods/Target Support Files/Pods-RideHitch/Pods-RideHitch.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +122,7 @@
 				21E2E28D1E1314B8000AAFD2 /* AWSMobileHubHelper.framework in Frameworks */,
 				21E2E2731E131489000AAFD2 /* FBSDKCoreKit.framework in Frameworks */,
 				21E2E2681E131463000AAFD2 /* AWSCore.framework in Frameworks */,
+				0CCC6B043F5A0A9664905071 /* Pods_RideHitch.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,6 +135,7 @@
 				21E2E24B1E131437000AAFD2 /* RideHitch */,
 				21E2E24A1E131437000AAFD2 /* Products */,
 				21E2E28F1E13158F000AAFD2 /* Frameworks */,
+				F7140BC042F7E2E16A973DDF /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -234,6 +240,7 @@
 			children = (
 				21E2E2921E13159B000AAFD2 /* libsqlite3.tbd */,
 				21E2E2901E131590000AAFD2 /* libz.tbd */,
+				D4EE7E0EE76BF4B1B54098EB /* Pods_RideHitch.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -258,6 +265,15 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
+		F7140BC042F7E2E16A973DDF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A306E1412D75C78CA5CAB0D1 /* Pods-RideHitch.debug.xcconfig */,
+				ED7EF10F14D145027A83EE68 /* Pods-RideHitch.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -265,11 +281,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 21E2E25B1E131437000AAFD2 /* Build configuration list for PBXNativeTarget "RideHitch" */;
 			buildPhases = (
+				26D0A1296C85E8C5D5731DA5 /* [CP] Check Pods Manifest.lock */,
 				21E2E2451E131437000AAFD2 /* Sources */,
 				21E2E2461E131437000AAFD2 /* Frameworks */,
 				21E2E2471E131437000AAFD2 /* Resources */,
 				21E2E2771E13148A000AAFD2 /* Embed Frameworks */,
 				21E2E2781E13149F000AAFD2 /* ShellScript */,
+				4B59135FC785E2632F0640A8 /* [CP] Embed Pods Frameworks */,
+				0022CD793EEF37869B9683AD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -335,6 +354,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0022CD793EEF37869B9683AD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RideHitch/Pods-RideHitch-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		21E2E2781E13149F000AAFD2 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -347,6 +381,36 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "bash \"${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSCore.framework/strip-frameworks.sh\"\n";
+		};
+		26D0A1296C85E8C5D5731DA5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		4B59135FC785E2632F0640A8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RideHitch/Pods-RideHitch-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -485,6 +549,7 @@
 		};
 		21E2E25C1E131437000AAFD2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A306E1412D75C78CA5CAB0D1 /* Pods-RideHitch.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = RideHitch/RideHitch.entitlements;
@@ -498,6 +563,43 @@
 				);
 				INFOPLIST_FILE = RideHitch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-l\"c++\"",
+					"-l\"z\"",
+					"-framework",
+					"\"Accelerate\"",
+					"-framework",
+					"\"CoreData\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreLocation\"",
+					"-framework",
+					"\"CoreText\"",
+					"-framework",
+					"\"GLKit\"",
+					"-framework",
+					"\"GoogleMaps\"",
+					"-framework",
+					"\"GoogleMapsBase\"",
+					"-framework",
+					"\"GoogleMapsCore\"",
+					"-framework",
+					"\"GooglePlacePicker\"",
+					"-framework",
+					"\"GooglePlaces\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"OpenGLES\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = awesomeApps.RideHitch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "/Users/andrewroach/Library/Mobile Documents/com~apple~CloudDocs/Documents/Programming /Git Projects/RideHitch/RideHitch/AmazonAws/Bridging_Header.h";
@@ -507,6 +609,7 @@
 		};
 		21E2E25D1E131437000AAFD2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ED7EF10F14D145027A83EE68 /* Pods-RideHitch.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = RideHitch/RideHitch.entitlements;
@@ -520,6 +623,43 @@
 				);
 				INFOPLIST_FILE = RideHitch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-l\"c++\"",
+					"-l\"z\"",
+					"-framework",
+					"\"Accelerate\"",
+					"-framework",
+					"\"CoreData\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreLocation\"",
+					"-framework",
+					"\"CoreText\"",
+					"-framework",
+					"\"GLKit\"",
+					"-framework",
+					"\"GoogleMaps\"",
+					"-framework",
+					"\"GoogleMapsBase\"",
+					"-framework",
+					"\"GoogleMapsCore\"",
+					"-framework",
+					"\"GooglePlacePicker\"",
+					"-framework",
+					"\"GooglePlaces\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"OpenGLES\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = awesomeApps.RideHitch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "/Users/andrewroach/Library/Mobile Documents/com~apple~CloudDocs/Documents/Programming /Git Projects/RideHitch/RideHitch/AmazonAws/Bridging_Header.h";

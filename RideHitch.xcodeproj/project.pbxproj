@@ -43,8 +43,6 @@
 		21E2E2A01E143EFF000AAFD2 /* TripsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E2E29F1E143EFF000AAFD2 /* TripsViewController.swift */; };
 		21E2E2A31E144FF0000AAFD2 /* ButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E2E2A21E144FF0000AAFD2 /* ButtonTableViewCell.swift */; };
 		21E2E2A51E145564000AAFD2 /* AddTripWithMapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E2E2A41E145564000AAFD2 /* AddTripWithMapVC.swift */; };
-		21E2E2A81E1456A7000AAFD2 /* RouteCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E2E2A61E1456A7000AAFD2 /* RouteCalculator.swift */; };
-		21E2E2A91E1456A7000AAFD2 /* GooglePlaceFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E2E2A71E1456A7000AAFD2 /* GooglePlaceFetcher.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -99,8 +97,6 @@
 		21E2E29F1E143EFF000AAFD2 /* TripsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripsViewController.swift; sourceTree = "<group>"; };
 		21E2E2A21E144FF0000AAFD2 /* ButtonTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonTableViewCell.swift; sourceTree = "<group>"; };
 		21E2E2A41E145564000AAFD2 /* AddTripWithMapVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTripWithMapVC.swift; sourceTree = "<group>"; };
-		21E2E2A61E1456A7000AAFD2 /* RouteCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteCalculator.swift; sourceTree = "<group>"; };
-		21E2E2A71E1456A7000AAFD2 /* GooglePlaceFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GooglePlaceFetcher.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -258,8 +254,6 @@
 				21E2E2A21E144FF0000AAFD2 /* ButtonTableViewCell.swift */,
 				21E2E2871E1314B8000AAFD2 /* TripTable.swift */,
 				21E2E24C1E131437000AAFD2 /* AppDelegate.swift */,
-				21E2E2A61E1456A7000AAFD2 /* RouteCalculator.swift */,
-				21E2E2A71E1456A7000AAFD2 /* GooglePlaceFetcher.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -365,7 +359,6 @@
 				21E2E2A31E144FF0000AAFD2 /* ButtonTableViewCell.swift in Sources */,
 				21E2E28E1E1314B8000AAFD2 /* TripTable.swift in Sources */,
 				21E2E2881E1314B8000AAFD2 /* AWSAPI_03RMTZMV63_RequestSchema.m in Sources */,
-				21E2E2A81E1456A7000AAFD2 /* RouteCalculator.swift in Sources */,
 				21E2E28C1E1314B8000AAFD2 /* AWSMobileClient.swift in Sources */,
 				21E2E2951E1315E5000AAFD2 /* LoginViewController.swift in Sources */,
 				21E2E24D1E131437000AAFD2 /* AppDelegate.swift in Sources */,
@@ -373,7 +366,6 @@
 				21E2E2A51E145564000AAFD2 /* AddTripWithMapVC.swift in Sources */,
 				21E2E28A1E1314B8000AAFD2 /* AWSAPI_03RMTZMV63_RiderPolygonFinderMobileHubClient.m in Sources */,
 				21E2E29E1E143B37000AAFD2 /* Constants.swift in Sources */,
-				21E2E2A91E1456A7000AAFD2 /* GooglePlaceFetcher.swift in Sources */,
 				21E2E2A01E143EFF000AAFD2 /* TripsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

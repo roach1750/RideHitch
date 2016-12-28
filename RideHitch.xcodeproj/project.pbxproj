@@ -39,6 +39,12 @@
 		21E2E2951E1315E5000AAFD2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E2E2941E1315E5000AAFD2 /* LoginViewController.swift */; };
 		21E2E2971E131646000AAFD2 /* AWSCognitoIdentityProvider.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21E2E2961E131646000AAFD2 /* AWSCognitoIdentityProvider.framework */; };
 		21E2E2981E131646000AAFD2 /* AWSCognitoIdentityProvider.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 21E2E2961E131646000AAFD2 /* AWSCognitoIdentityProvider.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		21E2E29E1E143B37000AAFD2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E2E29D1E143B37000AAFD2 /* Constants.swift */; };
+		21E2E2A01E143EFF000AAFD2 /* TripsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E2E29F1E143EFF000AAFD2 /* TripsViewController.swift */; };
+		21E2E2A31E144FF0000AAFD2 /* ButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E2E2A21E144FF0000AAFD2 /* ButtonTableViewCell.swift */; };
+		21E2E2A51E145564000AAFD2 /* AddTripWithMapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E2E2A41E145564000AAFD2 /* AddTripWithMapVC.swift */; };
+		21E2E2A81E1456A7000AAFD2 /* RouteCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E2E2A61E1456A7000AAFD2 /* RouteCalculator.swift */; };
+		21E2E2A91E1456A7000AAFD2 /* GooglePlaceFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E2E2A71E1456A7000AAFD2 /* GooglePlaceFetcher.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -83,12 +89,18 @@
 		21E2E2821E1314B8000AAFD2 /* AWSMobileClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AWSMobileClient.swift; sourceTree = "<group>"; };
 		21E2E2831E1314B8000AAFD2 /* AWSMobileHubHelper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSMobileHubHelper.framework; sourceTree = "<group>"; };
 		21E2E2841E1314B8000AAFD2 /* Bridging_Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bridging_Header.h; sourceTree = "<group>"; };
-		21E2E2871E1314B8000AAFD2 /* TripTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripTable.swift; sourceTree = "<group>"; };
+		21E2E2871E1314B8000AAFD2 /* TripTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TripTable.swift; path = AmazonAws/Models/NoSQL/TripTable.swift; sourceTree = "<group>"; };
 		21E2E2901E131590000AAFD2 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		21E2E2921E13159B000AAFD2 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		21E2E2941E1315E5000AAFD2 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		21E2E2961E131646000AAFD2 /* AWSCognitoIdentityProvider.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AWSCognitoIdentityProvider.framework; path = ../../../AWSCognitoIdentityProvider.framework; sourceTree = "<group>"; };
 		21E2E29C1E141EA5000AAFD2 /* RideHitch.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RideHitch.entitlements; sourceTree = "<group>"; };
+		21E2E29D1E143B37000AAFD2 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		21E2E29F1E143EFF000AAFD2 /* TripsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripsViewController.swift; sourceTree = "<group>"; };
+		21E2E2A21E144FF0000AAFD2 /* ButtonTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonTableViewCell.swift; sourceTree = "<group>"; };
+		21E2E2A41E145564000AAFD2 /* AddTripWithMapVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTripWithMapVC.swift; sourceTree = "<group>"; };
+		21E2E2A61E1456A7000AAFD2 /* RouteCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteCalculator.swift; sourceTree = "<group>"; };
+		21E2E2A71E1456A7000AAFD2 /* GooglePlaceFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GooglePlaceFetcher.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,12 +149,14 @@
 			isa = PBXGroup;
 			children = (
 				21E2E29C1E141EA5000AAFD2 /* RideHitch.entitlements */,
-				21E2E24C1E131437000AAFD2 /* AppDelegate.swift */,
-				21E2E2941E1315E5000AAFD2 /* LoginViewController.swift */,
 				21E2E2501E131437000AAFD2 /* Main.storyboard */,
+				21E2E2941E1315E5000AAFD2 /* LoginViewController.swift */,
+				21E2E29F1E143EFF000AAFD2 /* TripsViewController.swift */,
+				21E2E2A41E145564000AAFD2 /* AddTripWithMapVC.swift */,
+				21E2E2A11E144F26000AAFD2 /* Model */,
+				21E2E2991E1316BE000AAFD2 /* AWS */,
 				21E2E2531E131437000AAFD2 /* Assets.xcassets */,
 				21E2E2551E131437000AAFD2 /* LaunchScreen.storyboard */,
-				21E2E2991E1316BE000AAFD2 /* AWS */,
 				21E2E2581E131437000AAFD2 /* Info.plist */,
 			);
 			path = RideHitch;
@@ -215,7 +229,6 @@
 		21E2E2861E1314B8000AAFD2 /* NoSQL */ = {
 			isa = PBXGroup;
 			children = (
-				21E2E2871E1314B8000AAFD2 /* TripTable.swift */,
 			);
 			path = NoSQL;
 			sourceTree = "<group>";
@@ -236,6 +249,19 @@
 				21E2E25E1E131463000AAFD2 /* Sdk */,
 			);
 			name = AWS;
+			sourceTree = "<group>";
+		};
+		21E2E2A11E144F26000AAFD2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				21E2E29D1E143B37000AAFD2 /* Constants.swift */,
+				21E2E2A21E144FF0000AAFD2 /* ButtonTableViewCell.swift */,
+				21E2E2871E1314B8000AAFD2 /* TripTable.swift */,
+				21E2E24C1E131437000AAFD2 /* AppDelegate.swift */,
+				21E2E2A61E1456A7000AAFD2 /* RouteCalculator.swift */,
+				21E2E2A71E1456A7000AAFD2 /* GooglePlaceFetcher.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -336,13 +362,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				21E2E2891E1314B8000AAFD2 /* AWSAPI_03RMTZMV63_ResponseSchema.m in Sources */,
+				21E2E2A31E144FF0000AAFD2 /* ButtonTableViewCell.swift in Sources */,
 				21E2E28E1E1314B8000AAFD2 /* TripTable.swift in Sources */,
 				21E2E2881E1314B8000AAFD2 /* AWSAPI_03RMTZMV63_RequestSchema.m in Sources */,
+				21E2E2A81E1456A7000AAFD2 /* RouteCalculator.swift in Sources */,
 				21E2E28C1E1314B8000AAFD2 /* AWSMobileClient.swift in Sources */,
 				21E2E2951E1315E5000AAFD2 /* LoginViewController.swift in Sources */,
 				21E2E24D1E131437000AAFD2 /* AppDelegate.swift in Sources */,
 				21E2E28B1E1314B8000AAFD2 /* AWSConfiguration.swift in Sources */,
+				21E2E2A51E145564000AAFD2 /* AddTripWithMapVC.swift in Sources */,
 				21E2E28A1E1314B8000AAFD2 /* AWSAPI_03RMTZMV63_RiderPolygonFinderMobileHubClient.m in Sources */,
+				21E2E29E1E143B37000AAFD2 /* Constants.swift in Sources */,
+				21E2E2A91E1456A7000AAFD2 /* GooglePlaceFetcher.swift in Sources */,
+				21E2E2A01E143EFF000AAFD2 /* TripsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

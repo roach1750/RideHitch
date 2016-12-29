@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		0CCC6B043F5A0A9664905071 /* Pods_RideHitch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4EE7E0EE76BF4B1B54098EB /* Pods_RideHitch.framework */; };
+		213432B71E147F1000E7089A /* GooglePlaceFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213432B61E147F1000E7089A /* GooglePlaceFetcher.swift */; };
+		213432BA1E147F4300E7089A /* RealmInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213432B81E147F4300E7089A /* RealmInteractor.swift */; };
+		213432BB1E147F4300E7089A /* FavoritePlace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213432B91E147F4300E7089A /* FavoritePlace.swift */; };
+		213432BD1E14A19500E7089A /* WaypointMapAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213432BC1E14A19500E7089A /* WaypointMapAnnotation.swift */; };
+		213432BF1E14A1A700E7089A /* Proposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213432BE1E14A1A700E7089A /* Proposer.swift */; };
+		213432C11E14A1CB00E7089A /* RouteCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213432C01E14A1CB00E7089A /* RouteCalculator.swift */; };
+		213432C31E14A2CA00E7089A /* Arlington.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 213432C21E14A2CA00E7089A /* Arlington.gpx */; };
 		21E2E24D1E131437000AAFD2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E2E24C1E131437000AAFD2 /* AppDelegate.swift */; };
 		21E2E2521E131437000AAFD2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21E2E2501E131437000AAFD2 /* Main.storyboard */; };
 		21E2E2541E131437000AAFD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21E2E2531E131437000AAFD2 /* Assets.xcassets */; };
@@ -66,6 +73,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		213432B61E147F1000E7089A /* GooglePlaceFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GooglePlaceFetcher.swift; sourceTree = "<group>"; };
+		213432B81E147F4300E7089A /* RealmInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmInteractor.swift; sourceTree = "<group>"; };
+		213432B91E147F4300E7089A /* FavoritePlace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritePlace.swift; sourceTree = "<group>"; };
+		213432BC1E14A19500E7089A /* WaypointMapAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaypointMapAnnotation.swift; sourceTree = "<group>"; };
+		213432BE1E14A1A700E7089A /* Proposer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Proposer.swift; sourceTree = "<group>"; };
+		213432C01E14A1CB00E7089A /* RouteCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteCalculator.swift; sourceTree = "<group>"; };
+		213432C21E14A2CA00E7089A /* Arlington.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Arlington.gpx; sourceTree = "<group>"; };
 		21E2E2491E131437000AAFD2 /* RideHitch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RideHitch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		21E2E24C1E131437000AAFD2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		21E2E2511E131437000AAFD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -157,6 +171,7 @@
 				21E2E2A41E145564000AAFD2 /* AddTripWithMapVC.swift */,
 				21E2E2A11E144F26000AAFD2 /* Model */,
 				21E2E2991E1316BE000AAFD2 /* AWS */,
+				21E2E24C1E131437000AAFD2 /* AppDelegate.swift */,
 				21E2E2531E131437000AAFD2 /* Assets.xcassets */,
 				21E2E2551E131437000AAFD2 /* LaunchScreen.storyboard */,
 				21E2E2581E131437000AAFD2 /* Info.plist */,
@@ -260,7 +275,13 @@
 				21E2E29D1E143B37000AAFD2 /* Constants.swift */,
 				21E2E2A21E144FF0000AAFD2 /* ButtonTableViewCell.swift */,
 				21E2E2871E1314B8000AAFD2 /* TripTable.swift */,
-				21E2E24C1E131437000AAFD2 /* AppDelegate.swift */,
+				213432B61E147F1000E7089A /* GooglePlaceFetcher.swift */,
+				213432B81E147F4300E7089A /* RealmInteractor.swift */,
+				213432B91E147F4300E7089A /* FavoritePlace.swift */,
+				213432BC1E14A19500E7089A /* WaypointMapAnnotation.swift */,
+				213432C01E14A1CB00E7089A /* RouteCalculator.swift */,
+				213432BE1E14A1A700E7089A /* Proposer.swift */,
+				213432C21E14A2CA00E7089A /* Arlington.gpx */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -345,6 +366,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				21E2E26A1E131463000AAFD2 /* CheckXcodeVersion.sh in Resources */,
+				213432C31E14A2CA00E7089A /* Arlington.gpx in Resources */,
 				21E2E2571E131437000AAFD2 /* LaunchScreen.storyboard in Resources */,
 				21E2E2541E131437000AAFD2 /* Assets.xcassets in Resources */,
 				21E2E2521E131437000AAFD2 /* Main.storyboard in Resources */,
@@ -423,13 +445,19 @@
 				21E2E2A31E144FF0000AAFD2 /* ButtonTableViewCell.swift in Sources */,
 				21E2E28E1E1314B8000AAFD2 /* TripTable.swift in Sources */,
 				21E2E2881E1314B8000AAFD2 /* AWSAPI_03RMTZMV63_RequestSchema.m in Sources */,
+				213432BF1E14A1A700E7089A /* Proposer.swift in Sources */,
+				213432B71E147F1000E7089A /* GooglePlaceFetcher.swift in Sources */,
 				21E2E28C1E1314B8000AAFD2 /* AWSMobileClient.swift in Sources */,
 				21E2E2951E1315E5000AAFD2 /* LoginViewController.swift in Sources */,
 				21E2E24D1E131437000AAFD2 /* AppDelegate.swift in Sources */,
+				213432BA1E147F4300E7089A /* RealmInteractor.swift in Sources */,
 				21E2E28B1E1314B8000AAFD2 /* AWSConfiguration.swift in Sources */,
+				213432C11E14A1CB00E7089A /* RouteCalculator.swift in Sources */,
+				213432BD1E14A19500E7089A /* WaypointMapAnnotation.swift in Sources */,
 				21E2E2A51E145564000AAFD2 /* AddTripWithMapVC.swift in Sources */,
 				21E2E28A1E1314B8000AAFD2 /* AWSAPI_03RMTZMV63_RiderPolygonFinderMobileHubClient.m in Sources */,
 				21E2E29E1E143B37000AAFD2 /* Constants.swift in Sources */,
+				213432BB1E147F4300E7089A /* FavoritePlace.swift in Sources */,
 				21E2E2A01E143EFF000AAFD2 /* TripsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

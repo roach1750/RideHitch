@@ -126,18 +126,18 @@
                                         <rect key="frame" x="0.0" y="28" width="343" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="a5w-1D-8cz" id="kq4-S1-E7h">
-                                            <rect key="frame" x="0.0" y="0.0" width="343" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="AIF-fw-cG5">
-                                                    <rect key="frame" x="15" y="4" width="34" height="21"/>
+                                                    <rect key="frame" x="15" y="5" width="33.5" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xIc-GQ-g9Z">
-                                                    <rect key="frame" x="15" y="25" width="44" height="15"/>
+                                                    <rect key="frame" x="15" y="25.5" width="44" height="14.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <nil key="textColor"/>
@@ -150,7 +150,7 @@
                                         <rect key="frame" x="0.0" y="72" width="343" height="52"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JgH-WL-5Ag" id="98i-1O-xwP">
-                                            <rect key="frame" x="0.0" y="0.0" width="343" height="51"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="51.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vQU-tZ-mXS">
@@ -215,6 +215,9 @@
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Xww-d5-gTZ">
                                 <rect key="frame" x="0.0" y="64" width="375" height="44"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Cen-FV-c2s" id="PC9-Du-qR8"/>
+                                </connections>
                             </searchBar>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="dl0-rf-pJU">
                                 <rect key="frame" x="0.0" y="108" width="375" height="466"/>
@@ -225,7 +228,7 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="F1o-ry-cYB"/>
                                     <barButtonItem style="plain" id="bR5-N7-Uoh">
                                         <segmentedControl key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="Bod-UW-LKm">
-                                            <rect key="frame" x="22" y="8" width="331" height="29"/>
+                                            <rect key="frame" x="22" y="7.5" width="331" height="29"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <segments>
                                                 <segment title="First"/>
@@ -244,11 +247,15 @@
                                         <rect key="frame" x="0.0" y="28" width="343" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KsS-LG-fJ4" id="LcF-pS-87P">
-                                            <rect key="frame" x="0.0" y="0.0" width="343" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Cen-FV-c2s" id="P7D-HV-K2r"/>
+                                    <outlet property="delegate" destination="Cen-FV-c2s" id="iIK-Aw-oPI"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -306,7 +313,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tud-Ly-PIR" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Add New" id="eYg-AN-tGU"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="51X-pP-EhJ">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="51X-pP-EhJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

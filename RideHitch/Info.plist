@@ -2,6 +2,32 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>AWS</key>
+	<dict>
+		<key>CredentialsProvider</key>
+		<dict>
+			<key>CognitoIdentity</key>
+			<dict>
+				<key>Default</key>
+				<dict>
+					<key>PoolId</key>
+					<string>us-east-1:ea1ea4e0-5d83-4a6f-9ec4-2cdb0829685a</string>
+					<key>Region</key>
+					<string>us-east-1</string>
+				</dict>
+			</dict>
+		</dict>
+		<key>IdentityManager</key>
+		<dict>
+			<key>Default</key>
+			<dict/>
+		</dict>
+		<key>MobileHub</key>
+		<dict>
+			<key>ProjectClientId</key>
+			<string>MobileHub b10234f8-48bb-451f-8de3-250e95d8a5d3 aws-my-sample-app-ios-swift-v0.8</string>
+		</dict>
+	</dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>
@@ -16,10 +42,32 @@
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb595751053968516</string>
+			</array>
+		</dict>
+	</array>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>FacebookAppID</key>
+	<string>595751053968516</string>
+	<key>FacebookDisplayName</key>
+	<string> Hitch </string>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>fbapi</string>
+		<string>fb-messenger-api</string>
+		<string>fbauth2</string>
+		<string>fbshareextension</string>
+	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>give location to find routes</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
@@ -34,52 +82,5 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-    <key>AWS</key>
-    <dict>
-        <key>IdentityManager</key>
-        <dict>
-            <key>Default</key>
-            <dict/>
-        </dict>
-        <key>CredentialsProvider</key>
-        <dict>
-            <key>CognitoIdentity</key>
-            <dict>
-                <key>Default</key>
-                <dict>
-                    <key>PoolId</key>
-                    <string>us-east-1:ea1ea4e0-5d83-4a6f-9ec4-2cdb0829685a</string>
-                    <key>Region</key>
-                    <string>us-east-1</string>
-                </dict>
-            </dict>
-        </dict>
-        <key>MobileHub</key>
-        <dict>
-            <key>ProjectClientId</key>
-            <string>MobileHub b10234f8-48bb-451f-8de3-250e95d8a5d3 aws-my-sample-app-ios-swift-v0.8</string>
-        </dict>
-    </dict>
-    <key>FacebookAppID</key>
-    <string>595751053968516</string>
-    <key>FacebookDisplayName</key>
-    <string> Hitch </string>
-    <key>LSApplicationQueriesSchemes</key>
-    <array>
-        <string>fbapi</string>
-        <string>fb-messenger-api</string>
-        <string>fbauth2</string>
-        <string>fbshareextension</string>
-    </array>
-    <key>CFBundleURLTypes</key>
-    <array>
-        <dict>
-            <key>CFBundleURLSchemes</key>
-            <array>
-                <string>fb595751053968516</string>
-            </array>
-        </dict>
-    </array>
-    
 </dict>
 </plist>

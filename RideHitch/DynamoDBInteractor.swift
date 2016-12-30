@@ -7,7 +7,30 @@
 //
 
 import UIKit
+import AWSDynamoDB
+import AWSMobileHubHelper
 
 class DynamoDBInteractor: NSObject {
 
+    
+    func uploadTrip(trip: TripTable) {
+        let objectMapper = AWSDynamoDBObjectMapper.default()
+        objectMapper.save(trip) { (error) in
+            if let error = error {
+                print(error)
+                return
+            }
+            print("Success")
+        }
+        
+    
+    
+    
+    
+    }
+    
+    
+    
+    
+    
 }

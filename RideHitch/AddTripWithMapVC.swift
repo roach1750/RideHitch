@@ -10,6 +10,8 @@ import UIKit
 import MapKit
 import GooglePlaces
 import RealmSwift
+import AWSMobileHubHelper
+import AWSCognitoIdentityProvider
 
 
 class AddTripWithMapVC: UIViewController, MKMapViewDelegate, UISearchBarDelegate, CLLocationManagerDelegate, UITableViewDelegate, UITableViewDataSource {
@@ -45,7 +47,23 @@ class AddTripWithMapVC: UIViewController, MKMapViewDelegate, UISearchBarDelegate
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "configureTripSegue" {
+            let dV = segue.destination as! ConfigureTripVC
             
+            let newTrip = TripTable()
+            newTrip?._creationDate = NSDate().timeIntervalSince1970 as NSNumber?
+            newTrip?._creatorUserID = AWSIdentityManager.defaultIdentityManager().identityId!
+            newTrip?._isDriver = false
+            newTrip?._isMatched = false
+            newTrip?._originLatitude = (currentLocation?.coordinate.latitude)! as NSNumber?
+            newTrip?._originLongitude = (currentLocation?.coordinate.longitude)! as NSNumber?
+            newTrip?._originName = "Current Location"
+            newTrip?._originCoordinates = [(newTrip?._originLatitude)!, (newTrip?._originLongitude)!]
+            newTrip?._destinationLatitude = (GPF.currentResult?.coordinate.latitude)! as NSNumber?
+            newTrip?._destinationLongitude = (GPF.currentResult?.coordinate.longitude)! as NSNumber?
+            newTrip?._destinationName = (GPF.currentResult?.name)!
+            newTrip?._destinationCoordinates = [(newTrip?._destinationLatitude)!, (newTrip?._destinationLongitude)!]
+            newTrip?._tripID = arc4random() as NSNumber?
+            dV.trip = newTrip
         }
     }
     

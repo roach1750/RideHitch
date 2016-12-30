@@ -10,6 +10,8 @@ import UIKit
 
 class ConfigureTripVC: UIViewController {
 
+    var trip = TripTable()
+    
     @IBOutlet weak var depatureTimeTextField: UITextField!
     
     @IBOutlet weak var arrivalTimeTextField: UITextField!
@@ -35,6 +37,16 @@ class ConfigureTripVC: UIViewController {
         depatureTimeTextField.inputAccessoryView = toolbar
         arrivalTimeTextField.inputAccessoryView = toolbar
 
+    }
+    @IBAction func requestButtonPressed(_ sender: UIButton) {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "h:mm a"
+        
+        trip?._originDate = dateFormatter.date(from: depatureTimeTextField.text!)?.timeIntervalSince1970 as NSNumber?
+        trip?._destinationDate = dateFormatter.date(from: arrivalTimeTextField.text!)?.timeIntervalSince1970 as NSNumber?
+        
+        DynamoDBInteractor().uploadTrip(trip: trip!)
+        
     }
 
     func doneButtonPressed(){

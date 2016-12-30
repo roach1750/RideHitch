@@ -4,6 +4,19 @@
 <dict>
 	<key>AWS</key>
 	<dict>
+        <key>DynamoDBObjectMapper</key>
+        <dict>
+            <key>Default</key>
+            <dict>
+                <key>Region</key>
+                <string>us-east-1</string>
+            </dict>
+        </dict>
+        <key>IdentityManager</key>
+        <dict>
+            <key>Default</key>
+            <dict/>
+        </dict>
 		<key>CredentialsProvider</key>
 		<dict>
 			<key>CognitoIdentity</key>
@@ -82,5 +95,10 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+    <key>NSAppTransportSecurity</key>
+    <dict>
+        <key>NSAllowsArbitraryLoads</key>
+        <true/>
+    </dict>
 </dict>
 </plist>

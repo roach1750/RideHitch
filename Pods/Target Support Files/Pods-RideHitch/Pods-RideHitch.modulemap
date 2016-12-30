@@ -1,0 +1,6 @@
+framework module Pods_RideHitch {
+  umbrella header "Pods-RideHitch-umbrella.h"
+
+  export *
+  module * { export * }
+}

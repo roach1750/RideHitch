@@ -43,29 +43,30 @@ class AddTripWithMapVC: UIViewController, MKMapViewDelegate, UISearchBarDelegate
     }
     
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "configureTripSegue" {
+            
+        }
+    }
+    
     
     func reloadTable() {
         tableView.reloadData()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
         if searchBar.text == "" {
             let RI = RealmInteractor()
             let data = RI.fetchFavoritePlaces()
             return (data?.count)!
         }
-            
         else if GPF.results != nil {
-            
-            
             return GPF.results!.count
         }
         else {
             return 0
         }
     }
-    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         

@@ -15,6 +15,8 @@
 		213432BF1E14A1A700E7089A /* Proposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213432BE1E14A1A700E7089A /* Proposer.swift */; };
 		213432C11E14A1CB00E7089A /* RouteCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213432C01E14A1CB00E7089A /* RouteCalculator.swift */; };
 		213432C31E14A2CA00E7089A /* Arlington.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 213432C21E14A2CA00E7089A /* Arlington.gpx */; };
+		213432C51E14B08400E7089A /* ConfigureTripVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213432C41E14B08400E7089A /* ConfigureTripVC.swift */; };
+		213432C71E15BD1900E7089A /* DynamoDBInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213432C61E15BD1900E7089A /* DynamoDBInteractor.swift */; };
 		21E2E24D1E131437000AAFD2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E2E24C1E131437000AAFD2 /* AppDelegate.swift */; };
 		21E2E2521E131437000AAFD2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21E2E2501E131437000AAFD2 /* Main.storyboard */; };
 		21E2E2541E131437000AAFD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21E2E2531E131437000AAFD2 /* Assets.xcassets */; };
@@ -80,6 +82,8 @@
 		213432BE1E14A1A700E7089A /* Proposer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Proposer.swift; sourceTree = "<group>"; };
 		213432C01E14A1CB00E7089A /* RouteCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteCalculator.swift; sourceTree = "<group>"; };
 		213432C21E14A2CA00E7089A /* Arlington.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Arlington.gpx; sourceTree = "<group>"; };
+		213432C41E14B08400E7089A /* ConfigureTripVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigureTripVC.swift; sourceTree = "<group>"; };
+		213432C61E15BD1900E7089A /* DynamoDBInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamoDBInteractor.swift; sourceTree = "<group>"; };
 		21E2E2491E131437000AAFD2 /* RideHitch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RideHitch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		21E2E24C1E131437000AAFD2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		21E2E2511E131437000AAFD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -169,6 +173,7 @@
 				21E2E2941E1315E5000AAFD2 /* LoginViewController.swift */,
 				21E2E29F1E143EFF000AAFD2 /* TripsViewController.swift */,
 				21E2E2A41E145564000AAFD2 /* AddTripWithMapVC.swift */,
+				213432C41E14B08400E7089A /* ConfigureTripVC.swift */,
 				21E2E2A11E144F26000AAFD2 /* Model */,
 				21E2E2991E1316BE000AAFD2 /* AWS */,
 				21E2E24C1E131437000AAFD2 /* AppDelegate.swift */,
@@ -273,6 +278,7 @@
 			isa = PBXGroup;
 			children = (
 				21E2E29D1E143B37000AAFD2 /* Constants.swift */,
+				213432C61E15BD1900E7089A /* DynamoDBInteractor.swift */,
 				21E2E2A21E144FF0000AAFD2 /* ButtonTableViewCell.swift */,
 				21E2E2871E1314B8000AAFD2 /* TripTable.swift */,
 				213432B61E147F1000E7089A /* GooglePlaceFetcher.swift */,
@@ -441,11 +447,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				213432C71E15BD1900E7089A /* DynamoDBInteractor.swift in Sources */,
 				21E2E2891E1314B8000AAFD2 /* AWSAPI_03RMTZMV63_ResponseSchema.m in Sources */,
 				21E2E2A31E144FF0000AAFD2 /* ButtonTableViewCell.swift in Sources */,
 				21E2E28E1E1314B8000AAFD2 /* TripTable.swift in Sources */,
 				21E2E2881E1314B8000AAFD2 /* AWSAPI_03RMTZMV63_RequestSchema.m in Sources */,
 				213432BF1E14A1A700E7089A /* Proposer.swift in Sources */,
+				213432C51E14B08400E7089A /* ConfigureTripVC.swift in Sources */,
 				213432B71E147F1000E7089A /* GooglePlaceFetcher.swift in Sources */,
 				21E2E28C1E1314B8000AAFD2 /* AWSMobileClient.swift in Sources */,
 				21E2E2951E1315E5000AAFD2 /* LoginViewController.swift in Sources */,

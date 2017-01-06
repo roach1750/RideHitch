@@ -19,23 +19,28 @@ class AddTripWithMapVC: UIViewController, MKMapViewDelegate, UISearchBarDelegate
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var routesSegmentedControl: UIToolbar!
+    @IBOutlet weak var routesToolbar: UIToolbar!
+    var routesSegmentedControl: UISegmentedControl!
     
     var locationManager: CLLocationManager?
     let GPF = GooglePlaceFetcher.sharedInstance
     let RouteCalc = RouteCalculator.sharedInstance
     var currentLocation: CLLocation?
+    @IBOutlet weak var nextButton: UIBarButtonItem!
     
     override func viewDidLoad() {
         tableView.isHidden = true
+        nextButton.isEnabled = false
+        routesToolbar.isHidden = true
         requestLocationData()
         super.viewDidLoad()
     }
 
     override func viewWillAppear(_ animated: Bool) {
+        
         NotificationCenter.default.addObserver(self, selector: #selector(AddTripWithMapVC.reloadTable), name: NSNotification.Name(rawValue: "GoogleAutoCompleteDone"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(AddTripWithMapVC.addPlaceToMap), name: NSNotification.Name(rawValue: "GMSPlaceDownloaded"), object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(AddTripWithMapVC.addRouteToMap), name: NSNotification.Name(rawValue: "RouteCalculated"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(AddTripWithMapVC.routesReady), name: NSNotification.Name(rawValue: "RouteCalculated"), object: nil)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -111,6 +116,7 @@ class AddTripWithMapVC: UIViewController, MKMapViewDelegate, UISearchBarDelegate
             let data = RI.fetchFavoritePlaces()
             let favoritePlace = data?[indexPath.row]
             GPF.fetchPlaceForAutocompletePrediction(prediction: nil, id: (favoritePlace?.placeID)!)
+            nextButton.isEnabled = true
         }
         else {
             let destination = GPF.results?[indexPath.row]
@@ -167,19 +173,62 @@ class AddTripWithMapVC: UIViewController, MKMapViewDelegate, UISearchBarDelegate
         
     }
     
-    //Addes the route to map and then adds the polygon points to the map in green
-    func addRouteToMap() {
-        let route = RouteCalc.routes![0]
-        let routePolygon = RouteCalc.routePolygonPonts
-        
-        for point in routePolygon! {
-            let wMA = WaypointMapAnnotation(title: nil, subtitle: nil, coordinate: CLLocationCoordinate2D(latitude: point.latitude, longitude: point.longitude), color: UIColor.green)
-            self.mapView.addAnnotation(wMA)
-        }
-        self.mapView.addOverlays([(route.polyline)], level: .aboveRoads)
-        addOverlay(points: routePolygon!)
+    
+    func routesReady() {
+        addSegmentedControl()
+        addRouteToMap(withIndex: 0)
     }
     
+    //Addes the route to map and then adds the polygon points to the map in green
+    func addRouteToMap(withIndex: Int) {
+        
+        mapView.removeOverlays(mapView.overlays)
+        
+
+        let route = RouteCalc.routes![withIndex]
+        self.mapView.addOverlays([(route.polyline)], level: .aboveRoads)
+
+        
+//        let routePolygon = RouteCalc.routePolygonPonts
+//        for point in routePolygon! {
+//            let wMA = WaypointMapAnnotation(title: nil, subtitle: nil, coordinate: CLLocationCoordinate2D(latitude: point.latitude, longitude: point.longitude), color: UIColor.green)
+//            self.mapView.addAnnotation(wMA)
+//        }
+//        addOverlay(points: routePolygon!)
+
+    }
+    
+    
+    
+    func addSegmentedControl() {
+        
+        let segmentedControl = UISegmentedControl()
+        segmentedControl.addTarget(self, action: #selector(AddTripWithMapVC.changeRoute), for: .valueChanged)
+    
+        if let numRoutes = RouteCalc.routes?.count {
+                for i in 1...numRoutes {
+                    segmentedControl.insertSegment(withTitle: "Route \(String(i))", at: i-1, animated: false)
+                }
+        }
+        segmentedControl.isMomentary = false
+        segmentedControl.frame = CGRect(x: 50, y: 50, width: routesToolbar.frame.width - 20, height: 30)
+
+        segmentedControl.selectedSegmentIndex = 0
+        
+        let barItem = UIBarButtonItem(customView: segmentedControl)
+        let barSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        let barObjects: Array<UIBarButtonItem> = [barSpace,barItem,barSpace]
+        self.routesToolbar.items = barObjects
+        
+        
+        routesToolbar.isHidden = false
+
+        
+    }
+    
+    func changeRoute(sender: UISegmentedControl){
+        addRouteToMap(withIndex: sender.selectedSegmentIndex)
+    }
     
     
     func addOverlay(points: [CLLocationCoordinate2D])

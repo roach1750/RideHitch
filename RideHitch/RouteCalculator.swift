@@ -35,6 +35,7 @@ class RouteCalculator: NSObject {
         directions.calculate { (response, error) in
             if error == nil {
                 self.routes  = response?.routes
+                print("Found \(self.routes?.count) routes")
                 self.calculatePolygonForRoute()
             }
         }

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0CCC6B043F5A0A9664905071 /* Pods_RideHitch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4EE7E0EE76BF4B1B54098EB /* Pods_RideHitch.framework */; };
+		211E88FB1E27044F00866FAA /* LambdaInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211E88FA1E27044F00866FAA /* LambdaInteractor.swift */; };
+		211E88FD1E270AA800866FAA /* CloudLogicAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211E88FC1E270AA800866FAA /* CloudLogicAPI.swift */; };
 		213432B71E147F1000E7089A /* GooglePlaceFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213432B61E147F1000E7089A /* GooglePlaceFetcher.swift */; };
 		213432BA1E147F4300E7089A /* RealmInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213432B81E147F4300E7089A /* RealmInteractor.swift */; };
 		213432BB1E147F4300E7089A /* FavoritePlace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213432B91E147F4300E7089A /* FavoritePlace.swift */; };
@@ -21,19 +23,14 @@
 		21E2E2521E131437000AAFD2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21E2E2501E131437000AAFD2 /* Main.storyboard */; };
 		21E2E2541E131437000AAFD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21E2E2531E131437000AAFD2 /* Assets.xcassets */; };
 		21E2E2571E131437000AAFD2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21E2E2551E131437000AAFD2 /* LaunchScreen.storyboard */; };
-		21E2E2671E131463000AAFD2 /* AWSAPIGateway.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21E2E2601E131463000AAFD2 /* AWSAPIGateway.framework */; };
-		21E2E2681E131463000AAFD2 /* AWSCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21E2E2611E131463000AAFD2 /* AWSCore.framework */; };
-		21E2E2691E131463000AAFD2 /* AWSDynamoDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21E2E2621E131463000AAFD2 /* AWSDynamoDB.framework */; };
 		21E2E26A1E131463000AAFD2 /* CheckXcodeVersion.sh in Resources */ = {isa = PBXBuildFile; fileRef = 21E2E2631E131463000AAFD2 /* CheckXcodeVersion.sh */; };
 		21E2E26B1E131463000AAFD2 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21E2E2651E131463000AAFD2 /* FBSDKCoreKit.framework */; };
-		21E2E26C1E131463000AAFD2 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21E2E2661E131463000AAFD2 /* FBSDKLoginKit.framework */; };
 		21E2E26D1E131489000AAFD2 /* AWSAPIGateway.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21E2E2601E131463000AAFD2 /* AWSAPIGateway.framework */; };
 		21E2E26E1E131489000AAFD2 /* AWSAPIGateway.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 21E2E2601E131463000AAFD2 /* AWSAPIGateway.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		21E2E26F1E131489000AAFD2 /* AWSCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21E2E2611E131463000AAFD2 /* AWSCore.framework */; };
 		21E2E2701E131489000AAFD2 /* AWSCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 21E2E2611E131463000AAFD2 /* AWSCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		21E2E2711E131489000AAFD2 /* AWSDynamoDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21E2E2621E131463000AAFD2 /* AWSDynamoDB.framework */; };
 		21E2E2721E131489000AAFD2 /* AWSDynamoDB.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 21E2E2621E131463000AAFD2 /* AWSDynamoDB.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		21E2E2731E131489000AAFD2 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21E2E2651E131463000AAFD2 /* FBSDKCoreKit.framework */; };
 		21E2E2741E131489000AAFD2 /* FBSDKCoreKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 21E2E2651E131463000AAFD2 /* FBSDKCoreKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		21E2E2751E131489000AAFD2 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21E2E2661E131463000AAFD2 /* FBSDKLoginKit.framework */; };
 		21E2E2761E131489000AAFD2 /* FBSDKLoginKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 21E2E2661E131463000AAFD2 /* FBSDKLoginKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -75,6 +72,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		211E88D61E1F2F2100866FAA /* AWSLambda.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSLambda.framework; sourceTree = "<group>"; };
+		211E88FA1E27044F00866FAA /* LambdaInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LambdaInteractor.swift; sourceTree = "<group>"; };
+		211E88FC1E270AA800866FAA /* CloudLogicAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudLogicAPI.swift; sourceTree = "<group>"; };
 		213432B61E147F1000E7089A /* GooglePlaceFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GooglePlaceFetcher.swift; sourceTree = "<group>"; };
 		213432B81E147F4300E7089A /* RealmInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmInteractor.swift; sourceTree = "<group>"; };
 		213432B91E147F4300E7089A /* FavoritePlace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritePlace.swift; sourceTree = "<group>"; };
@@ -133,13 +133,8 @@
 				21E2E26F1E131489000AAFD2 /* AWSCore.framework in Frameworks */,
 				21E2E2751E131489000AAFD2 /* FBSDKLoginKit.framework in Frameworks */,
 				21E2E2711E131489000AAFD2 /* AWSDynamoDB.framework in Frameworks */,
-				21E2E2671E131463000AAFD2 /* AWSAPIGateway.framework in Frameworks */,
 				21E2E26B1E131463000AAFD2 /* FBSDKCoreKit.framework in Frameworks */,
-				21E2E26C1E131463000AAFD2 /* FBSDKLoginKit.framework in Frameworks */,
-				21E2E2691E131463000AAFD2 /* AWSDynamoDB.framework in Frameworks */,
 				21E2E28D1E1314B8000AAFD2 /* AWSMobileHubHelper.framework in Frameworks */,
-				21E2E2731E131489000AAFD2 /* FBSDKCoreKit.framework in Frameworks */,
-				21E2E2681E131463000AAFD2 /* AWSCore.framework in Frameworks */,
 				0CCC6B043F5A0A9664905071 /* Pods_RideHitch.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -197,6 +192,7 @@
 		21E2E25F1E131463000AAFD2 /* Aws */ = {
 			isa = PBXGroup;
 			children = (
+				211E88D61E1F2F2100866FAA /* AWSLambda.framework */,
 				21E2E2961E131646000AAFD2 /* AWSCognitoIdentityProvider.framework */,
 				21E2E2601E131463000AAFD2 /* AWSAPIGateway.framework */,
 				21E2E2611E131463000AAFD2 /* AWSCore.framework */,
@@ -279,6 +275,8 @@
 			children = (
 				21E2E29D1E143B37000AAFD2 /* Constants.swift */,
 				213432C61E15BD1900E7089A /* DynamoDBInteractor.swift */,
+				211E88FA1E27044F00866FAA /* LambdaInteractor.swift */,
+				211E88FC1E270AA800866FAA /* CloudLogicAPI.swift */,
 				21E2E2A21E144FF0000AAFD2 /* ButtonTableViewCell.swift */,
 				21E2E2871E1314B8000AAFD2 /* TripTable.swift */,
 				213432B61E147F1000E7089A /* GooglePlaceFetcher.swift */,
@@ -451,6 +449,8 @@
 				21E2E2891E1314B8000AAFD2 /* AWSAPI_03RMTZMV63_ResponseSchema.m in Sources */,
 				21E2E2A31E144FF0000AAFD2 /* ButtonTableViewCell.swift in Sources */,
 				21E2E28E1E1314B8000AAFD2 /* TripTable.swift in Sources */,
+				211E88FB1E27044F00866FAA /* LambdaInteractor.swift in Sources */,
+				211E88FD1E270AA800866FAA /* CloudLogicAPI.swift in Sources */,
 				21E2E2881E1314B8000AAFD2 /* AWSAPI_03RMTZMV63_RequestSchema.m in Sources */,
 				213432BF1E14A1A700E7089A /* Proposer.swift in Sources */,
 				213432C51E14B08400E7089A /* ConfigureTripVC.swift in Sources */,
@@ -587,6 +587,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A306E1412D75C78CA5CAB0D1 /* Pods-RideHitch.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = RideHitch/RideHitch.entitlements;
 				DEVELOPMENT_TEAM = P44AL382B9;
@@ -647,6 +648,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = ED7EF10F14D145027A83EE68 /* Pods-RideHitch.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = RideHitch/RideHitch.entitlements;
 				DEVELOPMENT_TEAM = P44AL382B9;

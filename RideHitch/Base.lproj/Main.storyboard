@@ -189,7 +189,13 @@
                             <constraint firstItem="Kfg-ti-xBf" firstAttribute="leading" secondItem="qub-nG-XFE" secondAttribute="leadingMargin" id="rm7-tU-tjJ"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Ride Hitch" id="nrH-Cz-Kit"/>
+                    <navigationItem key="navigationItem" title="Ride Hitch" id="nrH-Cz-Kit">
+                        <barButtonItem key="leftBarButtonItem" systemItem="refresh" id="VYz-Se-fla">
+                            <connections>
+                                <action selector="reload:" destination="IXV-YZ-6rH" id="2iB-6O-k8M"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="riderDriverSegmentedControl" destination="Kfg-ti-xBf" id="VGo-5v-5j5"/>
                         <outlet property="tableView" destination="2KY-GM-6kf" id="hHY-y3-UnV"/>
@@ -380,7 +386,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tud-Ly-PIR" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Add New" id="eYg-AN-tGU"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="51X-pP-EhJ">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="51X-pP-EhJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

@@ -47,6 +47,21 @@ class ConfigureTripVC: UIViewController {
         
         DynamoDBInteractor().uploadTrip(trip: trip!)
         
+        
+        let allViewController: [UIViewController] = self.navigationController!.viewControllers as [UIViewController];
+        
+        for aviewcontroller : UIViewController in allViewController
+        {
+            if aviewcontroller is TripsViewController
+            {
+                _ = self.navigationController?.popToViewController(aviewcontroller, animated: true)
+            }
+        }
+        
+        
+        
+        
+        
     }
 
     func doneButtonPressed(){

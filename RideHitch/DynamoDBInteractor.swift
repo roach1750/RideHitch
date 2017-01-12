@@ -9,6 +9,7 @@
 import UIKit
 import AWSDynamoDB
 import AWSMobileHubHelper
+import AWSLambda
 
 class DynamoDBInteractor: NSObject {
 
@@ -22,10 +23,6 @@ class DynamoDBInteractor: NSObject {
             }
             print("Success")
         }
-        
-    
-    
-    
     
     }
     

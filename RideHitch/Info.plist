@@ -2,8 +2,13 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>AWS</key>
-	<dict>
+    <key>AWS</key>
+    <dict>
+        <key>IdentityManager</key>
+        <dict>
+            <key>Default</key>
+            <dict/>
+        </dict>
         <key>DynamoDBObjectMapper</key>
         <dict>
             <key>Default</key>
@@ -12,35 +17,25 @@
                 <string>us-east-1</string>
             </dict>
         </dict>
-        <key>IdentityManager</key>
+        <key>CredentialsProvider</key>
         <dict>
-            <key>Default</key>
-            <dict/>
+            <key>CognitoIdentity</key>
+            <dict>
+                <key>Default</key>
+                <dict>
+                    <key>PoolId</key>
+                    <string>us-east-1:56e34d3c-fe82-4cf9-b311-74808af65cd1</string>
+                    <key>Region</key>
+                    <string>us-east-1</string>
+                </dict>
+            </dict>
         </dict>
-		<key>CredentialsProvider</key>
-		<dict>
-			<key>CognitoIdentity</key>
-			<dict>
-				<key>Default</key>
-				<dict>
-					<key>PoolId</key>
-					<string>us-east-1:ea1ea4e0-5d83-4a6f-9ec4-2cdb0829685a</string>
-					<key>Region</key>
-					<string>us-east-1</string>
-				</dict>
-			</dict>
-		</dict>
-		<key>IdentityManager</key>
-		<dict>
-			<key>Default</key>
-			<dict/>
-		</dict>
-		<key>MobileHub</key>
-		<dict>
-			<key>ProjectClientId</key>
-			<string>MobileHub b10234f8-48bb-451f-8de3-250e95d8a5d3 aws-my-sample-app-ios-swift-v0.8</string>
-		</dict>
-	</dict>
+        <key>MobileHub</key>
+        <dict>
+            <key>ProjectClientId</key>
+            <string>MobileHub 9556b0b8-2afc-40c8-90e9-d3cd9834bfab aws-my-sample-app-ios-swift-v0.8</string>
+        </dict>
+    </dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>

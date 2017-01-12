@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class TripsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var riderDriverSegmentedControl: UISegmentedControl!
@@ -21,6 +22,12 @@ class TripsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         super.viewDidLoad()
     }
     
+    @IBAction func reload(_ sender: UIBarButtonItem) {
+        let LI = LambdaInteractor()
+        LI.callCloudFunction()
+        
+        
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return (data.count) + 1

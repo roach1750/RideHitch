@@ -10,6 +10,7 @@
 		0CCC6B043F5A0A9664905071 /* Pods_RideHitch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4EE7E0EE76BF4B1B54098EB /* Pods_RideHitch.framework */; };
 		211E88FB1E27044F00866FAA /* LambdaInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211E88FA1E27044F00866FAA /* LambdaInteractor.swift */; };
 		211E88FD1E270AA800866FAA /* CloudLogicAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211E88FC1E270AA800866FAA /* CloudLogicAPI.swift */; };
+		211E89011E28659900866FAA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211E89001E28659900866FAA /* User.swift */; };
 		213432B71E147F1000E7089A /* GooglePlaceFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213432B61E147F1000E7089A /* GooglePlaceFetcher.swift */; };
 		213432BA1E147F4300E7089A /* RealmInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213432B81E147F4300E7089A /* RealmInteractor.swift */; };
 		213432BB1E147F4300E7089A /* FavoritePlace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213432B91E147F4300E7089A /* FavoritePlace.swift */; };
@@ -75,6 +76,7 @@
 		211E88D61E1F2F2100866FAA /* AWSLambda.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSLambda.framework; sourceTree = "<group>"; };
 		211E88FA1E27044F00866FAA /* LambdaInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LambdaInteractor.swift; sourceTree = "<group>"; };
 		211E88FC1E270AA800866FAA /* CloudLogicAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudLogicAPI.swift; sourceTree = "<group>"; };
+		211E89001E28659900866FAA /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		213432B61E147F1000E7089A /* GooglePlaceFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GooglePlaceFetcher.swift; sourceTree = "<group>"; };
 		213432B81E147F4300E7089A /* RealmInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmInteractor.swift; sourceTree = "<group>"; };
 		213432B91E147F4300E7089A /* FavoritePlace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritePlace.swift; sourceTree = "<group>"; };
@@ -282,6 +284,7 @@
 				213432B61E147F1000E7089A /* GooglePlaceFetcher.swift */,
 				213432B81E147F4300E7089A /* RealmInteractor.swift */,
 				213432B91E147F4300E7089A /* FavoritePlace.swift */,
+				211E89001E28659900866FAA /* User.swift */,
 				213432BC1E14A19500E7089A /* WaypointMapAnnotation.swift */,
 				213432C01E14A1CB00E7089A /* RouteCalculator.swift */,
 				213432BE1E14A1A700E7089A /* Proposer.swift */,
@@ -467,6 +470,7 @@
 				21E2E29E1E143B37000AAFD2 /* Constants.swift in Sources */,
 				213432BB1E147F4300E7089A /* FavoritePlace.swift in Sources */,
 				21E2E2A01E143EFF000AAFD2 /* TripsViewController.swift in Sources */,
+				211E89011E28659900866FAA /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

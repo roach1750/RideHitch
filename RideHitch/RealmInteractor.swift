@@ -37,6 +37,21 @@ class RealmInteractor: NSObject {
 //    
 //    
     
+    func saveUser(user: User) {
+        let realm = try! Realm()
+        try! realm.write {
+            realm.add(user)
+        }
+    }
+    
+    func fetchUser() -> User?{
+        let realm = try! Realm()
+        let user = realm.objects(User.self)
+        return user.first
+    }
+    
+    
+    
     func saveFavoritePlace(place: FavoritePlace) {
         
         let favoritePlaces = fetchFavoritePlaces()

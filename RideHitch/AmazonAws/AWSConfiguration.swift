@@ -15,16 +15,17 @@
 import AWSCore
 
 // Cognito User Pools Identity Id
-let AWSCognitoUserPoolId: String = "us-east-1_1FzrdRs0a"
+let AWSCognitoUserPoolId: String = "us-east-1_WTfzpszTx"
 
 // Cognito User Pools App Client Id
-let AWSCognitoUserPoolAppClientId: String = "2q9u1odc2jik43jq2fmkh8clc0"
+let AWSCognitoUserPoolAppClientId: String = "7e529c02lciuiegu56ankf93dl"
 
 // Cognito User Pools Region
 let AWSCognitoUserPoolRegion: AWSRegionType = .usEast1
 
 // Cognito User Pools Client Secret
-let AWSCognitoUserPoolClientSecret: String = "15r6j5r659qj3r1pst28erredv89d50qcqp7frmho72r6nb1hg4o"
+let AWSCognitoUserPoolClientSecret: String = "1u2uiaqnqca8pj7moa6a4pnspklpm7nan4g27j9nefbe2va34r57"
+
 
 // Identifier for Cloud Logic API invocation clients
 let AWSCloudLogicDefaultConfigurationKey: String = "CloudLogicAPIKey"

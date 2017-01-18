@@ -10,32 +10,31 @@ import UIKit
 import RealmSwift
 
 class RealmInteractor: NSObject {
-
+    
+    
+    func saveAWSTrip(trip: TripTable) {
         
-//    func saveTrip(trip: Trip) {
-//        
-//        let realm = try! Realm()
-//        try! realm.write {
-//            realm.add(trip)
-//        }
-//    }
-//    
-//    func fetchTrips() -> [Trip]? {
-//        let realm = try! Realm()
-//        let allObjects = Array(realm.objects(Trip.self).sorted(byProperty: "creationDate", ascending:false))
-//        return allObjects
-//    }
-//    
-//    func deleteAllRealmObjects() {
-//        let realm = try! Realm()
-//        try! realm.write {
-//            realm.deleteAll()
-//        }
-//    }
-//    
-//    
-//    
-//    
+        let realm = try! Realm()
+        do {
+            try! realm.write {
+                realm.create(RealmTrip.self, value: trip, update: false)
+            }
+        }
+    }
+        
+    func fetchTrips() -> [RealmTrip]? {
+        let realm = try! Realm()
+        let allObjects = Array(realm.objects(RealmTrip.self).sorted(byProperty: "creationDate", ascending:false))
+        return allObjects
+    }
+    //
+    //    func deleteAllRealmObjects() {
+    //        let realm = try! Realm()
+    //        try! realm.write {
+    //            realm.deleteAll()
+    //        }
+    //    }
+    
     
     func saveUser(user: User) {
         let realm = try! Realm()

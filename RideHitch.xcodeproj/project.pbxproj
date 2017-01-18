@@ -11,6 +11,7 @@
 		211E88FB1E27044F00866FAA /* LambdaInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211E88FA1E27044F00866FAA /* LambdaInteractor.swift */; };
 		211E88FD1E270AA800866FAA /* CloudLogicAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211E88FC1E270AA800866FAA /* CloudLogicAPI.swift */; };
 		211E89011E28659900866FAA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211E89001E28659900866FAA /* User.swift */; };
+		211E89051E2F027100866FAA /* RealmTrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211E89041E2F027100866FAA /* RealmTrip.swift */; };
 		213432B71E147F1000E7089A /* GooglePlaceFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213432B61E147F1000E7089A /* GooglePlaceFetcher.swift */; };
 		213432BA1E147F4300E7089A /* RealmInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213432B81E147F4300E7089A /* RealmInteractor.swift */; };
 		213432BB1E147F4300E7089A /* FavoritePlace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213432B91E147F4300E7089A /* FavoritePlace.swift */; };
@@ -77,6 +78,7 @@
 		211E88FA1E27044F00866FAA /* LambdaInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LambdaInteractor.swift; sourceTree = "<group>"; };
 		211E88FC1E270AA800866FAA /* CloudLogicAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudLogicAPI.swift; sourceTree = "<group>"; };
 		211E89001E28659900866FAA /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		211E89041E2F027100866FAA /* RealmTrip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RealmTrip.swift; path = ../../../../../../../../Desktop/RealmTrip.swift; sourceTree = "<group>"; };
 		213432B61E147F1000E7089A /* GooglePlaceFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GooglePlaceFetcher.swift; sourceTree = "<group>"; };
 		213432B81E147F4300E7089A /* RealmInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmInteractor.swift; sourceTree = "<group>"; };
 		213432B91E147F4300E7089A /* FavoritePlace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritePlace.swift; sourceTree = "<group>"; };
@@ -281,6 +283,7 @@
 				211E88FC1E270AA800866FAA /* CloudLogicAPI.swift */,
 				21E2E2A21E144FF0000AAFD2 /* ButtonTableViewCell.swift */,
 				21E2E2871E1314B8000AAFD2 /* TripTable.swift */,
+				211E89041E2F027100866FAA /* RealmTrip.swift */,
 				213432B61E147F1000E7089A /* GooglePlaceFetcher.swift */,
 				213432B81E147F4300E7089A /* RealmInteractor.swift */,
 				213432B91E147F4300E7089A /* FavoritePlace.swift */,
@@ -458,6 +461,7 @@
 				213432BF1E14A1A700E7089A /* Proposer.swift in Sources */,
 				213432C51E14B08400E7089A /* ConfigureTripVC.swift in Sources */,
 				213432B71E147F1000E7089A /* GooglePlaceFetcher.swift in Sources */,
+				211E89051E2F027100866FAA /* RealmTrip.swift in Sources */,
 				21E2E28C1E1314B8000AAFD2 /* AWSMobileClient.swift in Sources */,
 				21E2E2951E1315E5000AAFD2 /* LoginViewController.swift in Sources */,
 				21E2E24D1E131437000AAFD2 /* AppDelegate.swift in Sources */,

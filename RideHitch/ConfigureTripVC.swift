@@ -48,6 +48,7 @@ class ConfigureTripVC: UIViewController {
         DynamoDBInteractor().uploadTrip(trip: trip!)
         
         
+        
         let allViewController: [UIViewController] = self.navigationController!.viewControllers as [UIViewController];
         
         for aviewcontroller : UIViewController in allViewController

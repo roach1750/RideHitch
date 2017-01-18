@@ -22,9 +22,13 @@ class DynamoDBInteractor: NSObject {
                 return
             }
             print("Success")
+            let RI = RealmInteractor()
+            RI.saveAWSTrip(trip: trip)
         }
     
     }
+    
+    
     
     
     

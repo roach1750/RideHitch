@@ -24,12 +24,15 @@ class TripTable: AWSDynamoDBObjectModel, AWSDynamoDBModeling {
     var _destinationLatitude = 0.0
     var _destinationLongitude = 0.0
     var _destinationName = ""
+    var _destinationGeohash = ""
     var _isDriver =  false
     var _isMatched = false
     var _originDate = 0.0
     var _originLatitude = 0.0
     var _originLongitude = 0.0
     var _originName = ""
+    var _originGeohash = ""
+
     
     class func dynamoDBTableName() -> String {
 
@@ -51,6 +54,7 @@ class TripTable: AWSDynamoDBObjectModel, AWSDynamoDBModeling {
                "_destinationLatitude" : "destinationLatitude",
                "_destinationLongitude" : "destinationLongitude",
                "_destinationName" : "destinationName",
+               "_destinationGeohash" : "destinationGeohash",
                "_isDriver" : "isDriver",
                "_isMatched" : "isMatched",
                "_originCoordinates" : "originCoordinates",
@@ -58,6 +62,8 @@ class TripTable: AWSDynamoDBObjectModel, AWSDynamoDBModeling {
                "_originLatitude" : "originLatitude",
                "_originLongitude" : "originLongitude",
                "_originName" : "originName",
+               "_originGeohash" : "originGeohash",
+
         ]
     }
 }

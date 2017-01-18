@@ -14,6 +14,8 @@ class LambdaInteractor: NSObject {
     
     func callCloudFunction() {
         
+        print(AWSIdentityManager.defaultIdentityManager().identityId!)
+        
         let httpMethodName = "POST"
         let URLString = "/items"
         let queryStringParameters = ["key1":"value1"]
@@ -21,9 +23,27 @@ class LambdaInteractor: NSObject {
             "Content-Type": "application/json",
             "Accept": "application/json"
         ]
-        let httpBody = "{ \n  \"key1\":\"value1\", \n  \"key2\":\"value2\", \n  \"key3\":\"value3\"\n}"
+//        let httpBody = "{ \n  \"key1\":\"value1\", \n  \"key2\":\"value2\", \n  \"key3\":\"value3\"\n}"
         
-        let apiRequest = AWSAPIGatewayRequest(httpMethod: httpMethodName, urlString: URLString, queryParameters: queryStringParameters, headerParameters: headerParameters, httpBody: httpBody)
+        let userID = AWSIdentityManager.defaultIdentityManager().identityId!
+        //let httpBody = "{\"currentUserID" : userID }"
+    
+
+
+        let jsonObject: [String: AnyObject] = [
+            "currentUserID": userID as AnyObject
+        ]
+        
+        print(jsonObject)
+        
+        
+        
+        
+
+
+    
+    
+        let apiRequest = AWSAPIGatewayRequest(httpMethod: httpMethodName, urlString: URLString, queryParameters: queryStringParameters, headerParameters: headerParameters, httpBody: jsonObject)
         
         
         let cloudLogicAPI = CloudLogicAPI(displayName: "riderPolygonFinder",apiDescription: "", paths: ["/items", "/items/123",                ],

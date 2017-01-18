@@ -17,21 +17,19 @@ import AWSDynamoDB
 
 class TripTable: AWSDynamoDBObjectModel, AWSDynamoDBModeling {
     
-    var _tripID: NSNumber?
-    var _creationDate: NSNumber?
-    var _creatorUserID: String?
-    var _destinationCoordinates: Set<NSNumber>?
-    var _destinationDate: NSNumber?
-    var _destinationLatitude: NSNumber?
-    var _destinationLongitude: NSNumber?
-    var _destinationName: String?
-    var _isDriver: NSNumber?
-    var _isMatched: NSNumber?
-    var _originCoordinates: Set<NSNumber>?
-    var _originDate: NSNumber?
-    var _originLatitude: NSNumber?
-    var _originLongitude: NSNumber?
-    var _originName: String?
+    var _tripID = 0
+    var _creationDate = 0.0
+    var _creatorUserID = ""
+    var _destinationDate = 0.0
+    var _destinationLatitude = 0.0
+    var _destinationLongitude = 0.0
+    var _destinationName = ""
+    var _isDriver =  false
+    var _isMatched = false
+    var _originDate = 0.0
+    var _originLatitude = 0.0
+    var _originLongitude = 0.0
+    var _originName = ""
     
     class func dynamoDBTableName() -> String {
 

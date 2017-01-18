@@ -43,8 +43,8 @@ class RouteCalculator: NSObject {
     
     func calculateDirectionsForTrip(trip: TripTable){
         let request = MKDirectionsRequest()
-        request.source = MKMapItem(placemark: MKPlacemark(coordinate: (CLLocationCoordinate2DMake((trip._originLatitude as! CLLocationDegrees), (trip._originLongitude as! CLLocationDegrees)))))
-        request.destination = MKMapItem(placemark: MKPlacemark(coordinate: (CLLocationCoordinate2DMake((trip._destinationLatitude as! CLLocationDegrees), (trip._destinationLongitude as! CLLocationDegrees)))))
+        request.source = MKMapItem(placemark: MKPlacemark(coordinate: (CLLocationCoordinate2DMake((trip._originLatitude as CLLocationDegrees), (trip._originLongitude as CLLocationDegrees)))))
+        request.destination = MKMapItem(placemark: MKPlacemark(coordinate: (CLLocationCoordinate2DMake((trip._destinationLatitude as CLLocationDegrees), (trip._destinationLongitude as CLLocationDegrees)))))
         request.transportType = .automobile
         
         request.requestsAlternateRoutes = true

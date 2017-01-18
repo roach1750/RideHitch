@@ -42,8 +42,8 @@ class ConfigureTripVC: UIViewController {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "h:mm a"
         
-        trip?._originDate = dateFormatter.date(from: depatureTimeTextField.text!)?.timeIntervalSince1970 as NSNumber?
-        trip?._destinationDate = dateFormatter.date(from: arrivalTimeTextField.text!)?.timeIntervalSince1970 as NSNumber?
+        trip?._originDate = (dateFormatter.date(from: depatureTimeTextField.text!)?.timeIntervalSince1970)! as Double
+        trip?._destinationDate = (dateFormatter.date(from: arrivalTimeTextField.text!)?.timeIntervalSince1970)! as Double
         
         DynamoDBInteractor().uploadTrip(trip: trip!)
         

@@ -67,6 +67,7 @@ class AddTripWithMapVC: UIViewController, MKMapViewDelegate, UISearchBarDelegate
             newTrip._destinationLongitude = (GPF.currentResult?.coordinate.longitude)! as Double
             newTrip._destinationName = (GPF.currentResult?.name)!
             newTrip._tripID = Int(arc4random())
+            newTrip._polygonGeohash = RouteCalculator.sharedInstance.routePolygonGeohash!
             dV.trip = newTrip
             
             

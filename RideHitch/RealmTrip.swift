@@ -27,6 +27,7 @@ class RealmTrip: Object {
     dynamic var _originLongitude = 0.0
     dynamic var _originName = ""
     dynamic var _originGeohash = ""
+    dynamic var _polygonGeohash = ""
 
     
 }

@@ -20,6 +20,8 @@ class RouteCalculator: NSObject {
     
     var routes: [MKRoute]?
     var routePolygonPonts: [CLLocationCoordinate2D]?
+    var routePolygonGeohash: String?
+
     
     func calculateDirectionsForPlacemark(fromPlace: MKPlacemark, toPlace: MKPlacemark){
         
@@ -93,6 +95,14 @@ class RouteCalculator: NSObject {
         let point3 = CLLocationCoordinate2DMake(CLLocationDegrees(maxX), CLLocationDegrees(maxY))
         let point4 = CLLocationCoordinate2DMake(CLLocationDegrees(minX), CLLocationDegrees(maxY))
         routePolygonPonts = [point1, point2, point3, point4]
+        
+        
+        self.routePolygonGeohash = Geohash.encode(latitude: point1.latitude, longitude: point1.longitude, length: 10) + "_" +
+                                   Geohash.encode(latitude: point2.latitude, longitude: point2.longitude, length: 10) + "_" +
+                                   Geohash.encode(latitude: point3.latitude, longitude: point3.longitude, length: 10) + "_" +
+                                   Geohash.encode(latitude: point4.latitude, longitude: point4.longitude, length: 10)
+        
+        print(self.routePolygonGeohash)
         
         NotificationCenter.default.post(name: Notification.Name(rawValue: "RouteCalculated"), object: nil)
         

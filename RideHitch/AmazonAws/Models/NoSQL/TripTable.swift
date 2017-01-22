@@ -32,6 +32,8 @@ class TripTable: AWSDynamoDBObjectModel, AWSDynamoDBModeling {
     var _originLongitude = 0.0
     var _originName = ""
     var _originGeohash = ""
+    var _polygonGeohash = ""
+
 
     
     class func dynamoDBTableName() -> String {
@@ -63,6 +65,7 @@ class TripTable: AWSDynamoDBObjectModel, AWSDynamoDBModeling {
                "_originLongitude" : "originLongitude",
                "_originName" : "originName",
                "_originGeohash" : "originGeohash",
+               "_polygonGeohash" : "polygonGeohash"
 
         ]
     }

@@ -12,7 +12,7 @@ import AWSAPIGateway
 
 class LambdaInteractor: NSObject {
     
-    func callCloudFunction() {
+    func callCloudFunction(trip: RealmTrip) {
         
         print(AWSIdentityManager.defaultIdentityManager().identityId!)
         

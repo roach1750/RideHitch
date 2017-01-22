@@ -24,9 +24,10 @@ class RealmInteractor: NSObject {
         
     func fetchTrips() -> [RealmTrip]? {
         let realm = try! Realm()
-        let allObjects = Array(realm.objects(RealmTrip.self).sorted(byProperty: "creationDate", ascending:false))
+        let allObjects = Array(realm.objects(RealmTrip.self))
         return allObjects
     }
+    
     //
     //    func deleteAllRealmObjects() {
     //        let realm = try! Realm()

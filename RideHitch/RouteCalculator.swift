@@ -102,7 +102,6 @@ class RouteCalculator: NSObject {
                                    Geohash.encode(latitude: point3.latitude, longitude: point3.longitude, length: 10) + "_" +
                                    Geohash.encode(latitude: point4.latitude, longitude: point4.longitude, length: 10)
         
-        print(self.routePolygonGeohash)
         
         NotificationCenter.default.post(name: Notification.Name(rawValue: "RouteCalculated"), object: nil)
         

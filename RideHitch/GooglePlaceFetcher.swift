@@ -12,24 +12,16 @@ import RealmSwift
 
 
 class GooglePlaceFetcher: NSObject {
-    
-    class var sharedInstance: GooglePlaceFetcher {
-        struct Singleton {
-            static let instance = GooglePlaceFetcher()
-        }
-        return Singleton.instance
-    }
-    
+
     var placesClient = GMSPlacesClient()
     
-    var results: [GMSAutocompletePrediction]?
-    
-    func fetchPlacesForString(string: String, bounds: GMSCoordinateBounds){
+    func fetchPlacesForString(string: String, bounds: GMSCoordinateBounds, completion: @escaping (([GMSAutocompletePrediction]?) -> Void)){
         placesClient = GMSPlacesClient.shared()
         let filter = GMSAutocompleteFilter()
         
         
         filter.type = .noFilter
+        
         
         placesClient.autocompleteQuery(string, bounds: bounds, filter: filter) { (results, error) in
             if error != nil {
@@ -37,17 +29,12 @@ class GooglePlaceFetcher: NSObject {
                 print(error!)
             }
             else {
-                
-                self.results = results
-                NotificationCenter.default.post(name: Notification.Name(rawValue: "GoogleAutoCompleteDone"), object: nil)
-
+                completion(results)
             }
         }
     }
     
-    var currentResult: GMSPlace?
-    
-    func fetchPlaceForAutocompletePrediction(prediction: GMSAutocompletePrediction?, id: String ) {
+    func fetchPlaceForAutocompletePrediction(prediction: GMSAutocompletePrediction?, id: String, completion: @escaping(GMSPlace?) -> Void) {
         if prediction != nil {
             let favoritePlace = FavoritePlace()
             favoritePlace.placeID = (prediction?.placeID!)!
@@ -59,9 +46,7 @@ class GooglePlaceFetcher: NSObject {
         
         let placesClient = GMSPlacesClient()
         placesClient.lookUpPlaceID(id) { (result, error) in
-            self.currentResult = result
-            NotificationCenter.default.post(name: Notification.Name(rawValue: "GMSPlaceDownloaded"), object: nil)
-
+            completion(result)
         }
         
     }

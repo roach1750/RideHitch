@@ -23,7 +23,10 @@ class AddTripWithMapVC: UIViewController, MKMapViewDelegate, UISearchBarDelegate
     var routesSegmentedControl: UISegmentedControl!
     
     var locationManager: CLLocationManager?
-    let GPF = GooglePlaceFetcher.sharedInstance
+    
+    var currentResult: GMSPlace?
+    var results: [GMSAutocompletePrediction]?
+
     let RouteCalc = RouteCalculator.sharedInstance
     var currentLocation: CLLocation?
     @IBOutlet weak var nextButton: UIBarButtonItem!
@@ -38,14 +41,10 @@ class AddTripWithMapVC: UIViewController, MKMapViewDelegate, UISearchBarDelegate
 
     override func viewWillAppear(_ animated: Bool) {
         
-        NotificationCenter.default.addObserver(self, selector: #selector(AddTripWithMapVC.reloadTable), name: NSNotification.Name(rawValue: "GoogleAutoCompleteDone"), object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(AddTripWithMapVC.addPlaceToMap), name: NSNotification.Name(rawValue: "GMSPlaceDownloaded"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(AddTripWithMapVC.routesReady), name: NSNotification.Name(rawValue: "RouteCalculated"), object: nil)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        NotificationCenter.default.removeObserver(self, name: NSNotification.Name(rawValue: "GoogleAutoCompleteDone"), object: nil)
-        NotificationCenter.default.removeObserver(self, name: NSNotification.Name(rawValue: "GMSPlaceDownloaded"), object: nil)
         NotificationCenter.default.removeObserver(self, name: NSNotification.Name(rawValue: "RouteCalculated"), object: nil)
     }
     
@@ -63,20 +62,13 @@ class AddTripWithMapVC: UIViewController, MKMapViewDelegate, UISearchBarDelegate
             newTrip._originLatitude = (currentLocation?.coordinate.latitude)! as Double
             newTrip._originLongitude = (currentLocation?.coordinate.longitude)! as Double
             newTrip._originName = "Current Location"
-            newTrip._destinationLatitude = (GPF.currentResult?.coordinate.latitude)! as Double
-            newTrip._destinationLongitude = (GPF.currentResult?.coordinate.longitude)! as Double
-            newTrip._destinationName = (GPF.currentResult?.name)!
+            newTrip._destinationLatitude = (currentResult?.coordinate.latitude)! as Double
+            newTrip._destinationLongitude = (currentResult?.coordinate.longitude)! as Double
+            newTrip._destinationName = (currentResult?.name)!
             newTrip._tripID = Int(arc4random())
             newTrip._polygonGeohash = RouteCalculator.sharedInstance.routePolygonGeohash!
             dV.trip = newTrip
-            
-            
         }
-    }
-    
-    
-    func reloadTable() {
-        tableView.reloadData()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -85,8 +77,8 @@ class AddTripWithMapVC: UIViewController, MKMapViewDelegate, UISearchBarDelegate
             let data = RI.fetchFavoritePlaces()
             return (data?.count)!
         }
-        else if GPF.results != nil {
-            return GPF.results!.count
+        else if results != nil {
+            return results!.count
         }
         else {
             return 0
@@ -104,7 +96,7 @@ class AddTripWithMapVC: UIViewController, MKMapViewDelegate, UISearchBarDelegate
         }
         else {
             
-            let autocompletePlace = GPF.results?[indexPath.row]
+            let autocompletePlace = results?[indexPath.row]
             cell.textLabel?.text = autocompletePlace?.attributedFullText.string
         }
         return cell
@@ -112,23 +104,30 @@ class AddTripWithMapVC: UIViewController, MKMapViewDelegate, UISearchBarDelegate
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        let placeFetcher = GooglePlaceFetcher()
+
         if searchBar.text == "" {
             let RI = RealmInteractor()
             let data = RI.fetchFavoritePlaces()
             let favoritePlace = data?[indexPath.row]
-            GPF.fetchPlaceForAutocompletePrediction(prediction: nil, id: (favoritePlace?.placeID)!)
+            placeFetcher.fetchPlaceForAutocompletePrediction(prediction: nil, id: (favoritePlace?.placeID)!)  { result in
+                
+                self.currentResult = result
+                self.addPlaceToMap()
+            }
             nextButton.isEnabled = true
         }
         else {
-            let destination = GPF.results?[indexPath.row]
-            GPF.fetchPlaceForAutocompletePrediction(prediction: destination!, id: (destination?.placeID)!)
+            let destination = results?[indexPath.row]
+            placeFetcher.fetchPlaceForAutocompletePrediction(prediction: destination!, id: (destination?.placeID)!) { result in
+                self.currentResult = result
+                self.addPlaceToMap()
+            }
         }
         
         tableView.isHidden = true
         searchBar.resignFirstResponder()
         searchBar.text = ""
-        
     }
     
     
@@ -142,8 +141,8 @@ class AddTripWithMapVC: UIViewController, MKMapViewDelegate, UISearchBarDelegate
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         
         
-        let GPF = GooglePlaceFetcher.sharedInstance
-        
+        let placeFetcher = GooglePlaceFetcher()
+
         let nePoint = CGPoint(x: self.mapView.bounds.origin.x + mapView.bounds.size.width, y: mapView.bounds.origin.y)
         let swPoint = CGPoint(x: self.mapView.bounds.origin.x, y: (mapView.bounds.origin.y + mapView.bounds.size.height))
         let neCord = mapView.convert(nePoint, toCoordinateFrom: mapView)
@@ -151,12 +150,15 @@ class AddTripWithMapVC: UIViewController, MKMapViewDelegate, UISearchBarDelegate
         
         let bounds = GMSCoordinateBounds(coordinate: neCord, coordinate: swCord)
         
-        GPF.fetchPlacesForString(string: searchText, bounds: bounds)
+        placeFetcher.fetchPlacesForString(string: searchText, bounds: bounds) { results in
+            self.results = results
+            self.tableView.reloadData()
+        }
     }
     
     
     func addPlaceToMap() {
-        if let place = GPF.currentResult {
+        if let place = self.currentResult {
             let mapPin = WaypointMapAnnotation(title: place.name, subtitle: nil, coordinate: place.coordinate, color: UIColor.red)
             mapView.addAnnotation(mapPin)
             mapView.selectAnnotation(mapPin, animated: true)
@@ -167,12 +169,9 @@ class AddTripWithMapVC: UIViewController, MKMapViewDelegate, UISearchBarDelegate
     
     func calculateRouteToPlace(place: GMSPlace) {
         
-        
         let sourcePlacemark = MKPlacemark(coordinate: (currentLocation?.coordinate)!)
         let destinationPlacemark = MKPlacemark(coordinate: place.coordinate)
         RouteCalc.calculateDirectionsForPlacemark(fromPlace: sourcePlacemark, toPlace: destinationPlacemark)
-        
-        
     }
     
     
@@ -191,12 +190,12 @@ class AddTripWithMapVC: UIViewController, MKMapViewDelegate, UISearchBarDelegate
         self.mapView.addOverlays([(route.polyline)], level: .aboveRoads)
 
         
-//        let routePolygon = RouteCalc.routePolygonPonts
-//        for point in routePolygon! {
-//            let wMA = WaypointMapAnnotation(title: nil, subtitle: nil, coordinate: CLLocationCoordinate2D(latitude: point.latitude, longitude: point.longitude), color: UIColor.green)
-//            self.mapView.addAnnotation(wMA)
-//        }
-//        addOverlay(points: routePolygon!)
+        let routePolygon = RouteCalc.routePolygonPonts
+        for point in routePolygon! {
+            let wMA = WaypointMapAnnotation(title: nil, subtitle: nil, coordinate: CLLocationCoordinate2D(latitude: point.latitude, longitude: point.longitude), color: UIColor.green)
+            self.mapView.addAnnotation(wMA)
+        }
+        addOverlay(points: routePolygon!)
 
     }
     

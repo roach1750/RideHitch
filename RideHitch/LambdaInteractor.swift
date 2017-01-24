@@ -35,13 +35,6 @@ class LambdaInteractor: NSObject {
         ]
         
         print(jsonObject)
-        
-        
-        
-        
-
-
-    
     
         let apiRequest = AWSAPIGatewayRequest(httpMethod: httpMethodName, urlString: URLString, queryParameters: queryStringParameters, headerParameters: headerParameters, httpBody: jsonObject)
         

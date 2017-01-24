@@ -115,7 +115,6 @@ class AddTripWithMapVC: UIViewController, MKMapViewDelegate, UISearchBarDelegate
                 self.currentResult = result
                 self.addPlaceToMap()
             }
-            nextButton.isEnabled = true
         }
         else {
             let destination = results?[indexPath.row]
@@ -182,7 +181,8 @@ class AddTripWithMapVC: UIViewController, MKMapViewDelegate, UISearchBarDelegate
     
     //Addes the route to map and then adds the polygon points to the map in green
     func addRouteToMap(withIndex: Int) {
-        
+        nextButton.isEnabled = true
+
         mapView.removeOverlays(mapView.overlays)
         
 

@@ -2,40 +2,40 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-    <key>AWS</key>
-    <dict>
-        <key>IdentityManager</key>
-        <dict>
-            <key>Default</key>
-            <dict/>
-        </dict>
-        <key>DynamoDBObjectMapper</key>
-        <dict>
-            <key>Default</key>
-            <dict>
-                <key>Region</key>
-                <string>us-east-1</string>
-            </dict>
-        </dict>
-        <key>CredentialsProvider</key>
-        <dict>
-            <key>CognitoIdentity</key>
-            <dict>
-                <key>Default</key>
-                <dict>
-                    <key>PoolId</key>
-                    <string>us-east-1:ea1ea4e0-5d83-4a6f-9ec4-2cdb0829685a</string>
-                    <key>Region</key>
-                    <string>us-east-1</string>
-                </dict>
-            </dict>
-        </dict>
-        <key>MobileHub</key>
-        <dict>
-            <key>ProjectClientId</key>
-            <string>MobileHub b10234f8-48bb-451f-8de3-250e95d8a5d3 aws-my-sample-app-ios-swift-v0.8</string>
-        </dict>
-    </dict>
+	<key>AWS</key>
+	<dict>
+		<key>IdentityManager</key>
+		<dict>
+			<key>Default</key>
+			<dict/>
+		</dict>
+		<key>DynamoDBObjectMapper</key>
+		<dict>
+			<key>Default</key>
+			<dict>
+				<key>Region</key>
+				<string>us-east-1</string>
+			</dict>
+		</dict>
+		<key>CredentialsProvider</key>
+		<dict>
+			<key>CognitoIdentity</key>
+			<dict>
+				<key>Default</key>
+				<dict>
+					<key>PoolId</key>
+					<string>us-east-1:ea1ea4e0-5d83-4a6f-9ec4-2cdb0829685a</string>
+					<key>Region</key>
+					<string>us-east-1</string>
+				</dict>
+			</dict>
+		</dict>
+		<key>MobileHub</key>
+		<dict>
+			<key>ProjectClientId</key>
+			<string>MobileHub b10234f8-48bb-451f-8de3-250e95d8a5d3 aws-my-sample-app-ios-swift-v0.8</string>
+		</dict>
+	</dict>
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
@@ -60,6 +60,8 @@
 	<string>en</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<false/>
 	<key>CFBundleIdentifier</key>
 	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 	<key>CFBundleInfoDictionaryVersion</key>

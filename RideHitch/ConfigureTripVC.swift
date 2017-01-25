@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ATHMultiSelectionSegmentedControl
 
 class ConfigureTripVC: UIViewController {
 
@@ -16,9 +17,15 @@ class ConfigureTripVC: UIViewController {
     
     @IBOutlet weak var arrivalTimeTextField: UITextField!
     
+    @IBOutlet weak var daysOfTheWeekSegmentedControl: MultiSelectionSegmentedControl!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         initializeTextFieldInputView()
+        daysOfTheWeekSegmentedControl.insertSegmentsWithTitles(["Mon", "Tues", "Wed", "Thur", "Fri", "Sat", "Sun"])
+        
+        
     }
 
     func initializeTextFieldInputView() {
@@ -41,6 +48,9 @@ class ConfigureTripVC: UIViewController {
     @IBAction func requestButtonPressed(_ sender: UIButton) {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "h:mm a"
+        
+        
+//        print(daysOfTheWeekSegmentedControl.selectedSegmentIndices)
         
         trip?._originDate = (dateFormatter.date(from: depatureTimeTextField.text!)?.timeIntervalSince1970)! as Double
         trip?._destinationDate = (dateFormatter.date(from: arrivalTimeTextField.text!)?.timeIntervalSince1970)! as Double

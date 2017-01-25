@@ -11,4 +11,6 @@ pod 'GooglePlacePicker'
 pod 'GoogleMaps'
 pod 'RealmSwift'
 pod 'SwiftyJSON'
+pod "ATHMultiSelectionSegmentedControl"
+
 end

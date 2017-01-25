@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>ATHMultiSelectionSegmentedControl.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-RideHitch.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -27,22 +32,27 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>20EC70B26FCD202BD8490E7BCA0D2300</key>
+		<key>28A4FC016BE377A6231CDD12336725A0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7B62C826317FC87631F01AE6DC2811F9</key>
+		<key>35557110B6D8030E3D65A689A2C169A4</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>ABC1FF070FD084CA0162F5345B9ED622</key>
+		<key>3DADB5CB334C98F33092A7ACA05282AC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>FB048E297E92565F56F5D3A9832F1F58</key>
+		<key>71EDE3D3764B80BFC0B6269304E7CCDB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>806A33AD23BED7475EE2904D1F9359B4</key>
 		<dict>
 			<key>primary</key>
 			<true/>

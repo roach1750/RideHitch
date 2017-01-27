@@ -11,7 +11,7 @@ import ATHMultiSelectionSegmentedControl
 
 class ConfigureTripVC: UIViewController {
 
-    var trip = TripTable()
+    var trip = Trips()
     
     @IBOutlet weak var depatureTimeTextField: UITextField!
     
@@ -56,10 +56,9 @@ class ConfigureTripVC: UIViewController {
         trip?._destinationDate = (dateFormatter.date(from: arrivalTimeTextField.text!)?.timeIntervalSince1970)! as Double
         
         //ADD the GEOHASH: 
-        trip?._originGeohash = Geohash.encode(latitude: (trip?._originLatitude)!, longitude: (trip?._originLongitude)!, length: 10)
-        trip?._destinationGeohash = Geohash.encode(latitude: (trip?._destinationLatitude)!, longitude: (trip?._destinationLongitude)!, length: 10)
+
         
-        
+        trip?._geohash = Geohash.encode(latitude: (trip?._originLatitude)!, longitude: (trip?._originLongitude)!, length: 4)
         
         
         DynamoDBInteractor().uploadTrip(trip: trip!)

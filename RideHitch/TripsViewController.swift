@@ -88,7 +88,10 @@ class TripsViewController: UIViewController, UITableViewDelegate, UITableViewDat
             let trip = data[indexPath.section]
             let LI = LambdaInteractor()
             LI.callCloudFunction(trip: trip)
-
+            
+//            let DDBI = DynamoDBInteractor()
+//            DDBI.query(trip: trip)
+            
         }
         
         tableView.deselectRow(at: indexPath, animated: true)

@@ -14,7 +14,6 @@ class LambdaInteractor: NSObject {
     
     func callCloudFunction(trip: RealmTrip) {
         
-        print(AWSIdentityManager.defaultIdentityManager().identityId!)
         
         let httpMethodName = "POST"
         let URLString = "/items"
@@ -29,12 +28,13 @@ class LambdaInteractor: NSObject {
         //let httpBody = "{\"currentUserID" : userID }"
     
 
-
         let jsonObject: [String: AnyObject] = [
-            "currentUserID": userID as AnyObject
+            "userID": userID as AnyObject,
+            "geohash" : trip._geohash as AnyObject,
+            "polygon" : ["latMax" : "15"] as AnyObject
         ]
         
-        print(jsonObject)
+//        print(jsonObject)
     
         let apiRequest = AWSAPIGatewayRequest(httpMethod: httpMethodName, urlString: URLString, queryParameters: queryStringParameters, headerParameters: headerParameters, httpBody: jsonObject)
         
@@ -50,10 +50,14 @@ class LambdaInteractor: NSObject {
             
             print(responseString!)
             print(result.statusCode)
+            print(result.headers)
+
             return nil
             
 
         }, cancellationToken: nil)
+        
+        
         
 
         

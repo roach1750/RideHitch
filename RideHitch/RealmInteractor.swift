@@ -12,14 +12,16 @@ import RealmSwift
 class RealmInteractor: NSObject {
     
     
-    func saveAWSTrip(trip: TripTable) {
+    func saveAWSTrip(trip: Trips) {
         
         let realm = try! Realm()
+        
         do {
             try! realm.write {
                 realm.create(RealmTrip.self, value: trip, update: false)
             }
         }
+
     }
         
     func fetchTrips() -> [RealmTrip]? {

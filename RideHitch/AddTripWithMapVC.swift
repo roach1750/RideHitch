@@ -36,6 +36,8 @@ class AddTripWithMapVC: UIViewController, MKMapViewDelegate, UISearchBarDelegate
         nextButton.isEnabled = false
         routesToolbar.isHidden = true
         requestLocationData()
+        self.navigationController?.navigationBar.tintColor = UIColor.white
+
         super.viewDidLoad()
     }
 
@@ -53,7 +55,7 @@ class AddTripWithMapVC: UIViewController, MKMapViewDelegate, UISearchBarDelegate
         if segue.identifier == "configureTripSegue" {
             let dV = segue.destination as! ConfigureTripVC
             
-            let newTrip = TripTable()!
+            let newTrip = Trips()!
             newTrip._creationDate = NSDate().timeIntervalSince1970 as Double
             newTrip._creatorUserID = AWSIdentityManager.defaultIdentityManager().identityId!
             newTrip._isDriver = false
@@ -65,8 +67,8 @@ class AddTripWithMapVC: UIViewController, MKMapViewDelegate, UISearchBarDelegate
             newTrip._destinationLatitude = (currentResult?.coordinate.latitude)! as Double
             newTrip._destinationLongitude = (currentResult?.coordinate.longitude)! as Double
             newTrip._destinationName = (currentResult?.name)!
-            newTrip._tripID = Int(arc4random())
-            newTrip._polygonGeohash = RouteCalculator.sharedInstance.routePolygonGeohash!
+            newTrip._tripID = String(Int(arc4random()))
+//            newTrip._polygonGeohash = RouteCalculator.sharedInstance.routePolygonGeohash!
             dV.trip = newTrip
         }
     }

@@ -233,6 +233,7 @@
                         <subviews>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Xww-d5-gTZ">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <color key="barTintColor" red="0.94174087047576904" green="0.21313980221748352" blue="0.3285178542137146" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="Cen-FV-c2s" id="PC9-Du-qR8"/>
@@ -285,6 +286,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Add New Ride" id="QJa-VD-EcQ">
                         <barButtonItem key="rightBarButtonItem" title="Next" id="0oJ-S3-FlS">
+                            <color key="tintColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                             <connections>
                                 <segue destination="lIN-4s-jkd" kind="show" identifier="configureTripSegue" id="9xh-dc-RE8"/>
                             </connections>

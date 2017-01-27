@@ -70,7 +70,7 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate, AWSCognit
         
         if RI.fetchUser() != nil {
             print("attempting to login AWS User")
-            loginToAWS()
+            createAWSUser()
         }
         else {
             FBSDKGraphRequest.init(graphPath: "me", parameters: ["fields":"first_name, last_name, id, email, picture.type(large)"]).start { (connection, result, error) in

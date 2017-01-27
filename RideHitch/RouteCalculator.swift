@@ -43,7 +43,7 @@ class RouteCalculator: NSObject {
         }
     }
     
-    func calculateDirectionsForTrip(trip: TripTable){
+    func calculateDirectionsForTrip(trip: Trips){
         let request = MKDirectionsRequest()
         request.source = MKMapItem(placemark: MKPlacemark(coordinate: (CLLocationCoordinate2DMake((trip._originLatitude as CLLocationDegrees), (trip._originLongitude as CLLocationDegrees)))))
         request.destination = MKMapItem(placemark: MKPlacemark(coordinate: (CLLocationCoordinate2DMake((trip._destinationLatitude as CLLocationDegrees), (trip._destinationLongitude as CLLocationDegrees)))))
@@ -96,6 +96,7 @@ class RouteCalculator: NSObject {
         let point4 = CLLocationCoordinate2DMake(CLLocationDegrees(minX), CLLocationDegrees(maxY))
         routePolygonPonts = [point1, point2, point3, point4]
         
+        print(routePolygonPonts!)
         
         self.routePolygonGeohash = Geohash.encode(latitude: point1.latitude, longitude: point1.longitude, length: 10) + "_" +
                                    Geohash.encode(latitude: point2.latitude, longitude: point2.longitude, length: 10) + "_" +

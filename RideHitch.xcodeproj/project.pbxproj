@@ -23,6 +23,7 @@
 		213432C51E14B08400E7089A /* ConfigureTripVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213432C41E14B08400E7089A /* ConfigureTripVC.swift */; };
 		213432C71E15BD1900E7089A /* DynamoDBInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213432C61E15BD1900E7089A /* DynamoDBInteractor.swift */; };
 		21AC7BC41E399003009DED63 /* Trips.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AC7BC31E399003009DED63 /* Trips.swift */; };
+		21AC7BC71E3AEF3D009DED63 /* AWSAPI_WM412QKRJB_FuncitonTwoMobileHubClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 21AC7BC61E3AEF3D009DED63 /* AWSAPI_WM412QKRJB_FuncitonTwoMobileHubClient.m */; };
 		21E2E24D1E131437000AAFD2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E2E24C1E131437000AAFD2 /* AppDelegate.swift */; };
 		21E2E2521E131437000AAFD2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21E2E2501E131437000AAFD2 /* Main.storyboard */; };
 		21E2E2541E131437000AAFD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21E2E2531E131437000AAFD2 /* Assets.xcassets */; };
@@ -92,6 +93,8 @@
 		213432C41E14B08400E7089A /* ConfigureTripVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigureTripVC.swift; sourceTree = "<group>"; };
 		213432C61E15BD1900E7089A /* DynamoDBInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamoDBInteractor.swift; sourceTree = "<group>"; };
 		21AC7BC31E399003009DED63 /* Trips.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trips.swift; sourceTree = "<group>"; };
+		21AC7BC51E3AEF3D009DED63 /* AWSAPI_WM412QKRJB_FuncitonTwoMobileHubClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AWSAPI_WM412QKRJB_FuncitonTwoMobileHubClient.h; sourceTree = "<group>"; };
+		21AC7BC61E3AEF3D009DED63 /* AWSAPI_WM412QKRJB_FuncitonTwoMobileHubClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AWSAPI_WM412QKRJB_FuncitonTwoMobileHubClient.m; sourceTree = "<group>"; };
 		21E2E2491E131437000AAFD2 /* RideHitch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RideHitch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		21E2E24C1E131437000AAFD2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		21E2E2511E131437000AAFD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -240,6 +243,8 @@
 				21E2E27E1E1314B8000AAFD2 /* AWSAPI_03RMTZMV63_ResponseSchema.m */,
 				21E2E27F1E1314B8000AAFD2 /* AWSAPI_03RMTZMV63_RiderPolygonFinderMobileHubClient.h */,
 				21E2E2801E1314B8000AAFD2 /* AWSAPI_03RMTZMV63_RiderPolygonFinderMobileHubClient.m */,
+				21AC7BC51E3AEF3D009DED63 /* AWSAPI_WM412QKRJB_FuncitonTwoMobileHubClient.h */,
+				21AC7BC61E3AEF3D009DED63 /* AWSAPI_WM412QKRJB_FuncitonTwoMobileHubClient.m */,
 			);
 			path = Api;
 			sourceTree = "<group>";
@@ -461,6 +466,7 @@
 				21E2E2891E1314B8000AAFD2 /* AWSAPI_03RMTZMV63_ResponseSchema.m in Sources */,
 				21AC7BC41E399003009DED63 /* Trips.swift in Sources */,
 				21E2E2A31E144FF0000AAFD2 /* ButtonTableViewCell.swift in Sources */,
+				21AC7BC71E3AEF3D009DED63 /* AWSAPI_WM412QKRJB_FuncitonTwoMobileHubClient.m in Sources */,
 				21E2E28E1E1314B8000AAFD2 /* TripTable.swift in Sources */,
 				211E88FB1E27044F00866FAA /* LambdaInteractor.swift in Sources */,
 				211E88FD1E270AA800866FAA /* CloudLogicAPI.swift in Sources */,

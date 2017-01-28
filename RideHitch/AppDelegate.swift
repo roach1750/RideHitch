@@ -26,6 +26,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
         
         UIApplication.shared.statusBarStyle = .lightContent
+        
+        let credentialsProvider = AWSCognitoCredentialsProvider(regionType: .usEast1, identityPoolId: AWSCognitoUserPoolId)
+        let configureation = AWSServiceConfiguration(region: .usEast1, credentialsProvider: credentialsProvider)
+        AWSServiceManager.default().defaultServiceConfiguration = configureation
 
         
         

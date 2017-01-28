@@ -247,7 +247,7 @@
                                 <items/>
                             </toolbar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qdY-3m-w0b">
-                                <rect key="frame" x="16" y="44" width="343" height="301.5"/>
+                                <rect key="frame" x="16" y="44" width="343" height="302"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="KsS-LG-fJ4">
@@ -345,7 +345,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="10X-fF-tOA">
-                                <rect key="frame" x="16" y="274.5" width="343" height="54"/>
+                                <rect key="frame" x="16" y="275" width="343" height="54"/>
                                 <color key="backgroundColor" red="0.058660924434661865" green="0.84922808408737183" blue="0.37025660276412964" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="54" id="lAw-AS-UG4"/>
@@ -420,7 +420,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tud-Ly-PIR" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Add New" id="eYg-AN-tGU"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="51X-pP-EhJ">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="51X-pP-EhJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

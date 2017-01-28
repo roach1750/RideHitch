@@ -12,3 +12,4 @@
 
 #import "AWSAPI_03RMTZMV63_RiderPolygonFinderMobileHubClient.h"
 #import "AWSAPI_WM412QKRJB_FuncitonTwoMobileHubClient.h"
+#import "AWSAPI_941ZML5OB5_FunctionThreeMobileHubClient.h"

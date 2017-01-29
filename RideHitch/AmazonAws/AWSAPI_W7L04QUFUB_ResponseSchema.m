@@ -14,13 +14,13 @@
  */
  
 
-#import "AWSAPI_941ZML5OB5_RequestSchema.h"
+#import "AWSAPI_W7L04QUFUB_ResponseSchema.h"
 
-@implementation AWSAPI_941ZML5OB5_RequestSchema
+@implementation AWSAPI_W7L04QUFUB_ResponseSchema
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
     return @{
-             @"request": @"request"
+             @"response": @"response"
              };
 }
 

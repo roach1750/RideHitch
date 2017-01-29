@@ -15,7 +15,7 @@
  
 
 
-#import "AWSAPI_03RMTZMV63_RiderPolygonFinderMobileHubClient.h"
+#import "AWSAPI_W7L04QUFUB_HitchAPIMobileHubClient.h"
 #import <AWSCore/AWSCore.h>
 #import <AWSCore/AWSSignature.h>
 #import <AWSCore/AWSSynchronizedMutableDictionary.h>
@@ -43,7 +43,7 @@
 
 @end
 
-@interface AWSAPI_03RMTZMV63_RiderPolygonFinderMobileHubClient()
+@interface AWSAPI_W7L04QUFUB_HitchAPIMobileHubClient()
 
 @property (nonatomic, strong) AWSServiceConfiguration *configuration;
 
@@ -55,9 +55,9 @@
 
 @end
 
-@implementation AWSAPI_03RMTZMV63_RiderPolygonFinderMobileHubClient
+@implementation AWSAPI_W7L04QUFUB_HitchAPIMobileHubClient
 
-static NSString *const AWSInfoClientKey = @"AWSAPI_03RMTZMV63_RiderPolygonFinderMobileHubClient";
+static NSString *const AWSInfoClientKey = @"AWSAPI_W7L04QUFUB_HitchAPIMobileHubClient";
 
 @synthesize configuration = _configuration;
 
@@ -76,10 +76,10 @@ static AWSSynchronizedMutableDictionary *_serviceClients = nil;
                                                            credentialsProvider:nil];
     }
 
-    static AWSAPI_03RMTZMV63_RiderPolygonFinderMobileHubClient *_defaultClient = nil;
+    static AWSAPI_W7L04QUFUB_HitchAPIMobileHubClient *_defaultClient = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        _defaultClient = [[AWSAPI_03RMTZMV63_RiderPolygonFinderMobileHubClient alloc] initWithConfiguration:serviceConfiguration];
+        _defaultClient = [[AWSAPI_W7L04QUFUB_HitchAPIMobileHubClient alloc] initWithConfiguration:serviceConfiguration];
     });
 
     return _defaultClient;
@@ -90,13 +90,13 @@ static AWSSynchronizedMutableDictionary *_serviceClients = nil;
     dispatch_once(&onceToken, ^{
         _serviceClients = [AWSSynchronizedMutableDictionary new];
     });
-    [_serviceClients setObject:[[AWSAPI_03RMTZMV63_RiderPolygonFinderMobileHubClient alloc] initWithConfiguration:configuration]
+    [_serviceClients setObject:[[AWSAPI_W7L04QUFUB_HitchAPIMobileHubClient alloc] initWithConfiguration:configuration]
                         forKey:key];
 }
 
 + (instancetype)clientForKey:(NSString *)key {
     @synchronized(self) {
-        AWSAPI_03RMTZMV63_RiderPolygonFinderMobileHubClient *serviceClient = [_serviceClients objectForKey:key];
+        AWSAPI_W7L04QUFUB_HitchAPIMobileHubClient *serviceClient = [_serviceClients objectForKey:key];
         if (serviceClient) {
             return serviceClient;
         }
@@ -106,7 +106,7 @@ static AWSSynchronizedMutableDictionary *_serviceClients = nil;
         if (serviceInfo) {
             AWSServiceConfiguration *serviceConfiguration = [[AWSServiceConfiguration alloc] initWithRegion:serviceInfo.region
                                                                                         credentialsProvider:serviceInfo.cognitoCredentialsProvider];
-            [AWSAPI_03RMTZMV63_RiderPolygonFinderMobileHubClient registerClientWithConfiguration:serviceConfiguration
+            [AWSAPI_W7L04QUFUB_HitchAPIMobileHubClient registerClientWithConfiguration:serviceConfiguration
                                                     forKey:key];
         }
 
@@ -129,7 +129,7 @@ static AWSSynchronizedMutableDictionary *_serviceClients = nil;
     if (self = [super init]) {
         _configuration = [configuration copy];
 
-        NSString *URLString = @"https://03rmtzmv63.execute-api.us-east-1.amazonaws.com/Development";
+        NSString *URLString = @"https://w7l04qufub.execute-api.us-east-1.amazonaws.com/Development";
         if ([URLString hasSuffix:@"/"]) {
             URLString = [URLString substringToIndex:[URLString length] - 1];
         }

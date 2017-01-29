@@ -9,14 +9,6 @@
             <key>Default</key>
             <dict/>
         </dict>
-        <key>DynamoDBObjectMapper</key>
-        <dict>
-            <key>Default</key>
-            <dict>
-                <key>Region</key>
-                <string>us-east-1</string>
-            </dict>
-        </dict>
         <key>CredentialsProvider</key>
         <dict>
             <key>CognitoIdentity</key>
@@ -35,8 +27,21 @@
             <key>ProjectClientId</key>
             <string>MobileHub b10234f8-48bb-451f-8de3-250e95d8a5d3 aws-my-sample-app-ios-swift-v0.8</string>
         </dict>
-
+        <key>DynamoDBObjectMapper</key>
+        <dict>
+            <key>Default</key>
+            <dict>
+                <key>Region</key>
+                <string>us-east-1</string>
+            </dict>
+        </dict>
+    
+    
+    
+    
+    
     </dict>
+    
 
 	<key>CFBundleURLTypes</key>
 	<array>

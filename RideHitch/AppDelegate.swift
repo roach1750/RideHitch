@@ -27,9 +27,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         UIApplication.shared.statusBarStyle = .lightContent
         
-        let credentialsProvider = AWSCognitoCredentialsProvider(regionType: .usEast1, identityPoolId: AWSCognitoUserPoolId)
-        let configureation = AWSServiceConfiguration(region: .usEast1, credentialsProvider: credentialsProvider)
-        AWSServiceManager.default().defaultServiceConfiguration = configureation
+//        let credentialsProvider = AWSCognitoCredentialsProvider(regionType: .usEast1, identityPoolId: AWSCognitoUserPoolId)
+//        let configureation = AWSServiceConfiguration(region: .usEast1, credentialsProvider: credentialsProvider)
+//        AWSServiceManager.default().defaultServiceConfiguration = configureation
 
         
         

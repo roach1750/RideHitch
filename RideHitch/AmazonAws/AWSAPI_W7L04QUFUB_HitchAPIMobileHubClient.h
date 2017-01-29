@@ -24,7 +24,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  The service client object.
  */
-@interface AWSAPI_941ZML5OB5_FunctionThreeMobileHubClient: AWSAPIGatewayClient
+@interface AWSAPI_W7L04QUFUB_HitchAPIMobileHubClient: AWSAPIGatewayClient
 
 /**
  Returns the singleton service client. If the singleton object does not exist, the SDK instantiates the default service client with `defaultServiceConfiguration` from `[AWSServiceManager defaultServiceManager]`. The reference to this object is maintained by the SDK, and you do not need to retain it manually.
@@ -57,13 +57,13 @@ NS_ASSUME_NONNULL_BEGIN
 
  *Swift*
 
-     let serviceClient = AWSAPI_941ZML5OB5_FunctionThreeMobileHubClient.defaultClient()
+     let serviceClient = AWSAPI_W7L04QUFUB_HitchAPIMobileHubClient.defaultClient()
 
  *Objective-C*
 
-     AWSAPI_941ZML5OB5_FunctionThreeMobileHubClient *serviceClient = [AWSAPI_941ZML5OB5_FunctionThreeMobileHubClient defaultClient];
+     AWSAPI_W7L04QUFUB_HitchAPIMobileHubClient *serviceClient = [AWSAPI_W7L04QUFUB_HitchAPIMobileHubClient defaultClient];
 
- Alternatively, this configuration could also be set in the `info.plist` file of your app under `AWS` dictionary with a configuration dictionary by name `AWSAPI_941ZML5OB5_FunctionThreeMobileHubClient`.
+ Alternatively, this configuration could also be set in the `info.plist` file of your app under `AWS` dictionary with a configuration dictionary by name `AWSAPI_W7L04QUFUB_HitchAPIMobileHubClient`.
 
  @return The default service client.
  */
@@ -79,7 +79,7 @@ NS_ASSUME_NONNULL_BEGIN
      func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
          let credentialProvider = AWSCognitoCredentialsProvider(regionType: .USEast1, identityPoolId: "YourIdentityPoolId")
          let configuration = AWSServiceConfiguration(region: .USWest2, credentialsProvider: credentialProvider)
-         AWSAPI_941ZML5OB5_FunctionThreeMobileHubClient.registerClientWithConfiguration(configuration, forKey: "USWest2AWSAPI_941ZML5OB5_FunctionThreeMobileHubClient")
+         AWSAPI_W7L04QUFUB_HitchAPIMobileHubClient.registerClientWithConfiguration(configuration, forKey: "USWest2AWSAPI_W7L04QUFUB_HitchAPIMobileHubClient")
 
          return true
      }
@@ -92,7 +92,7 @@ NS_ASSUME_NONNULL_BEGIN
          AWSServiceConfiguration *configuration = [[AWSServiceConfiguration alloc] initWithRegion:AWSRegionUSWest2
                                                                               credentialsProvider:credentialsProvider];
 
-         [AWSAPI_941ZML5OB5_FunctionThreeMobileHubClient registerClientWithConfiguration:configuration forKey:@"USWest2AWSAPI_941ZML5OB5_FunctionThreeMobileHubClient"];
+         [AWSAPI_W7L04QUFUB_HitchAPIMobileHubClient registerClientWithConfiguration:configuration forKey:@"USWest2AWSAPI_W7L04QUFUB_HitchAPIMobileHubClient"];
 
          return YES;
      }
@@ -101,11 +101,11 @@ NS_ASSUME_NONNULL_BEGIN
 
  *Swift*
 
-     let serviceClient = AWSAPI_941ZML5OB5_FunctionThreeMobileHubClient(forKey: "USWest2AWSAPI_941ZML5OB5_FunctionThreeMobileHubClient")
+     let serviceClient = AWSAPI_W7L04QUFUB_HitchAPIMobileHubClient(forKey: "USWest2AWSAPI_W7L04QUFUB_HitchAPIMobileHubClient")
 
  *Objective-C*
 
-     AWSAPI_941ZML5OB5_FunctionThreeMobileHubClient *serviceClient = [AWSAPI_941ZML5OB5_FunctionThreeMobileHubClient clientForKey:@"USWest2AWSAPI_941ZML5OB5_FunctionThreeMobileHubClient"];
+     AWSAPI_W7L04QUFUB_HitchAPIMobileHubClient *serviceClient = [AWSAPI_W7L04QUFUB_HitchAPIMobileHubClient clientForKey:@"USWest2AWSAPI_W7L04QUFUB_HitchAPIMobileHubClient"];
 
  @warning After calling this method, do not modify the configuration object. It may cause unspecified behaviors.
 
@@ -124,7 +124,7 @@ NS_ASSUME_NONNULL_BEGIN
      func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
          let credentialProvider = AWSCognitoCredentialsProvider(regionType: .USEast1, identityPoolId: "YourIdentityPoolId")
          let configuration = AWSServiceConfiguration(region: .USWest2, credentialsProvider: credentialProvider)
-         AWSAPI_941ZML5OB5_FunctionThreeMobileHubClient.registerClientWithConfiguration(configuration, forKey: "USWest2AWSAPI_941ZML5OB5_FunctionThreeMobileHubClient")
+         AWSAPI_W7L04QUFUB_HitchAPIMobileHubClient.registerClientWithConfiguration(configuration, forKey: "USWest2AWSAPI_W7L04QUFUB_HitchAPIMobileHubClient")
 
          return true
      }
@@ -137,7 +137,7 @@ NS_ASSUME_NONNULL_BEGIN
          AWSServiceConfiguration *configuration = [[AWSServiceConfiguration alloc] initWithRegion:AWSRegionUSWest2
                                                                               credentialsProvider:credentialsProvider];
 
-         [AWSAPI_941ZML5OB5_FunctionThreeMobileHubClient registerClientWithConfiguration:configuration forKey:@"USWest2AWSAPI_941ZML5OB5_FunctionThreeMobileHubClient"];
+         [AWSAPI_W7L04QUFUB_HitchAPIMobileHubClient registerClientWithConfiguration:configuration forKey:@"USWest2AWSAPI_W7L04QUFUB_HitchAPIMobileHubClient"];
 
          return YES;
      }
@@ -146,11 +146,11 @@ NS_ASSUME_NONNULL_BEGIN
 
  *Swift*
 
-     let serviceClient = AWSAPI_941ZML5OB5_FunctionThreeMobileHubClient(forKey: "USWest2AWSAPI_941ZML5OB5_FunctionThreeMobileHubClient")
+     let serviceClient = AWSAPI_W7L04QUFUB_HitchAPIMobileHubClient(forKey: "USWest2AWSAPI_W7L04QUFUB_HitchAPIMobileHubClient")
 
  *Objective-C*
 
-     AWSAPI_941ZML5OB5_FunctionThreeMobileHubClient *serviceClient = [AWSAPI_941ZML5OB5_FunctionThreeMobileHubClient clientForKey:@"USWest2AWSAPI_941ZML5OB5_FunctionThreeMobileHubClient"];
+     AWSAPI_W7L04QUFUB_HitchAPIMobileHubClient *serviceClient = [AWSAPI_W7L04QUFUB_HitchAPIMobileHubClient clientForKey:@"USWest2AWSAPI_W7L04QUFUB_HitchAPIMobileHubClient"];
 
  @param key A string to identify the service client.
 

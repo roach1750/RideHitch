@@ -14,13 +14,13 @@
  */
  
 
-#import "AWSAPI_03RMTZMV63_ResponseSchema.h"
+#import "AWSAPI_W7L04QUFUB_RequestSchema.h"
 
-@implementation AWSAPI_03RMTZMV63_ResponseSchema
+@implementation AWSAPI_W7L04QUFUB_RequestSchema
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
     return @{
-             @"response": @"response"
+             @"request": @"request"
              };
 }
 

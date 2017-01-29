@@ -40,11 +40,7 @@ class DynamoDBInteractor: NSObject {
         queryExpression.expressionAttributeValues = [":geohash": trip._geohash, ":creationDate": 1485396558.101692,]
         
         objectMapper.query(Trips.self, expression: queryExpression) { (results, error) in
-            
             print(results?.items as Any)
-            
-            
-            
         }
         
         

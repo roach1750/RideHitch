@@ -7,69 +7,68 @@
 //
 
 import UIKit
-import AWSMobileHubHelper
-import AWSAPIGateway
-import AWSLambda
 
 class LambdaInteractor: NSObject {
     
     
     
-    var cloudLogicAPI: CloudLogicAPI?
     
-    
+
     
     func callCloudFunction(trip: RealmTrip) {
         
-        cloudLogicAPI = CloudLogicAPIFactory.supportedCloudLogicAPIs[1]
-        
-        
-        
         let httpMethodName = "POST"
         let URLString = "/items"
-        let queryStringParameters = ["lang":"en"]
-        let headerParameters = ["Accept": "application/json", "Content-Type": "application/json"]
-
+        let queryStringParameters = ["key1":"value1"]
+        let headerParameters = [
+            "Content-Type": "application/json",
+            "Accept": "application/json"
+        ]
+        let httpBody = "{ \n  \"key1\":\"value1\", \n  \"key2\":\"value2\", \n  \"key3\":\"value3\"\n}"
         
-        //        let httpBody = "{ \n  \"key1\":\"value1\", \n  \"key2\":\"value2\", \n  \"key3\":\"value3\"\n}"
+        // Construct the request object
+        let apiRequest = AWSAPIGatewayRequest(httpMethod: httpMethodName,
+                                              urlString: URLString,
+                                              queryParameters: queryStringParameters,
+                                              headerParameters: headerParameters,
+                                              httpBody: httpBody)
         
-//        let userID = AWSIdentityManager.defaultIdentityManager().identityId!
-        //let httpBody = "{\"currentUserID" : userID }"
+        // Fetch the Cloud Logic client to be used for invocation
+        // Change the `AWSAPI_XE21FG_MyCloudLogicClient` class name to the client class for your generated SDK
+        let invocationClient = AWSAPI_W7L04QUFUB_HitchAPIMobileHubClient.init(forKey: AWSCloudLogicDefaultConfigurationKey)
         
-//        let polygon = ["latMax" : "15"]
-        
-//        let jsonObject: [String: AnyObject] = [
-//            "userID": userID as AnyObject,
-//            "geohash" : trip._geohash as AnyObject,
-//            "polygon" : polygon as AnyObject
-//        ]
-//        
-        
-        let apiRequest = AWSAPIGatewayRequest(httpMethod: httpMethodName, urlString: URLString, queryParameters: queryStringParameters, headerParameters: headerParameters, httpBody: nil)
-        
-        
-        print(apiRequest)
-        
-        cloudLogicAPI?.apiClient?.invoke(apiRequest).continue({ (task) -> Any? in
+        invocationClient.invoke(apiRequest).continue({(task: AWSTask) -> AnyObject? in
+//            guard let strongSelf = self else { return nil } This returens when uncomments, what is the error?
             
+            if let error = task.error {
+                print("Error occurred: \(error)")
+                // Handle error here
+                return nil
+            }
             
-            let result = task.result! as AWSAPIGatewayResponse
-        
-            print(result.statusCode)
-            let responseString = String(data: result.responseData!, encoding: String.Encoding.utf8)
+            if let exception = task.exception {
+                print("Exception Occurred: \(exception)")
+                // Handle exception here
+                return nil
+            }
+            
+            // Handle successful result here
+            let result = task.result
+            let responseString = String(data: (result?.responseData)!, encoding: String.Encoding.utf8)
             
             print(responseString!)
+            print(result?.statusCode as Any)
             
             return nil
-            
-        }, cancellationToken: nil)
+        })
         
-        
-        
-
         
         
     }
+    
+    
+    
+    
     
     
 }

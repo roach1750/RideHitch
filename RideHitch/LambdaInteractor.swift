@@ -34,11 +34,13 @@ class LambdaInteractor: NSObject {
                                               httpBody: httpBody)
         
         // Fetch the Cloud Logic client to be used for invocation
-        // Change the `AWSAPI_XE21FG_MyCloudLogicClient` class name to the client class for your generated SDK
         let invocationClient = AWSAPI_W7L04QUFUB_HitchAPIMobileHubClient.init(forKey: AWSCloudLogicDefaultConfigurationKey)
+        
+        let startTime = Date()
         
         invocationClient.invoke(apiRequest).continue({(task: AWSTask) -> AnyObject? in
 //            guard let strongSelf = self else { return nil } This returens when uncomments, what is the error?
+            let endTime = Date()
             
             if let error = task.error {
                 print("Error occurred: \(error)")
@@ -58,7 +60,7 @@ class LambdaInteractor: NSObject {
             
             print(responseString!)
             print(result?.statusCode as Any)
-            
+            print("This request took: \(endTime.timeIntervalSince(startTime)) seconds")
             return nil
         })
         

@@ -28,6 +28,7 @@ class ConfigureTripVC: UIViewController {
         
     }
 
+
     func initializeTextFieldInputView() {
         // Add date picker
         let datePicker = UIDatePicker()
@@ -39,7 +40,10 @@ class ConfigureTripVC: UIViewController {
         // Add toolbar with done button on the right
         let toolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: self.view.bounds.width, height: 50))
         let flexibleSeparator = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
-        let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(ConfigureTripVC.doneButtonPressed))
+
+        
+        let doneButton = UIBarButtonItem(title: "Next", style: .done, target: self, action: #selector(ConfigureTripVC.doneButtonPressed))
+        
         toolbar.items = [flexibleSeparator, doneButton]
         depatureTimeTextField.inputAccessoryView = toolbar
         arrivalTimeTextField.inputAccessoryView = toolbar
@@ -56,7 +60,7 @@ class ConfigureTripVC: UIViewController {
         trip?._destinationDate = (dateFormatter.date(from: arrivalTimeTextField.text!)?.timeIntervalSince1970)! as Double
         
         //ADD the GEOHASH: 
-
+        
         
         trip?._geohash = Geohash.encode(latitude: (trip?._originLatitude)!, longitude: (trip?._originLongitude)!, length: 4)
         
@@ -82,7 +86,17 @@ class ConfigureTripVC: UIViewController {
     }
 
     func doneButtonPressed(){
-        view.endEditing(true)
+        
+        if depatureTimeTextField.isFirstResponder {
+            updateTextField(datePicker: depatureTimeTextField.inputView as! UIDatePicker)
+            arrivalTimeTextField.becomeFirstResponder()
+        }
+        else {
+            updateTextField(datePicker: depatureTimeTextField.inputView as! UIDatePicker)
+            view.endEditing(true)
+        }
+        
+        
     }
     
     func updateTextField(datePicker: UIDatePicker){

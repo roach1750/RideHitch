@@ -35,6 +35,7 @@ class LambdaInteractor: NSObject {
             "originDate": trip._originDate as AnyObject,
             "originLatitude": trip._originLatitude as AnyObject,
             "originLongitude": trip._originLongitude as AnyObject,
+            "userID": trip._creatorUserID as AnyObject
         ]
         
         

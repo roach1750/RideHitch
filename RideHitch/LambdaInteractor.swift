@@ -24,14 +24,26 @@ class LambdaInteractor: NSObject {
             "Content-Type": "application/json",
             "Accept": "application/json"
         ]
-        let httpBody = "{ \n  \"key1\":\"value1\", \n  \"key2\":\"value2\", \n  \"key3\":\"value3\"\n}"
+//        let httpBody = "{ \n  \"key1\":\"value1\", \n  \"key2\":\"value2\", \n  \"key3\":\"value3\"\n}"
+        
+        
+        let jsonObject: [String: AnyObject] = [
+            "geohash": trip._geohash as AnyObject,
+            "polygon": trip._polygon as AnyObject,
+            "tripID": trip._tripID as AnyObject,
+            "destinationDate": trip._destinationDate as AnyObject,
+            "originDate": trip._originDate as AnyObject,
+            "originLatitude": trip._originLatitude as AnyObject,
+            "originLongitude": trip._originLongitude as AnyObject,
+        ]
+        
         
         // Construct the request object
         let apiRequest = AWSAPIGatewayRequest(httpMethod: httpMethodName,
                                               urlString: URLString,
                                               queryParameters: queryStringParameters,
                                               headerParameters: headerParameters,
-                                              httpBody: httpBody)
+                                              httpBody: jsonObject)
         
         // Fetch the Cloud Logic client to be used for invocation
         let invocationClient = AWSAPI_W7L04QUFUB_HitchAPIMobileHubClient.init(forKey: AWSCloudLogicDefaultConfigurationKey)
@@ -58,8 +70,12 @@ class LambdaInteractor: NSObject {
             let result = task.result
             let responseString = String(data: (result?.responseData)!, encoding: String.Encoding.utf8)
             
-            print(responseString!)
+            
+            
             print(result?.statusCode as Any)
+            
+            print(responseString as Any)
+            
             print("This request took: \(endTime.timeIntervalSince(startTime)) seconds")
             return nil
         })

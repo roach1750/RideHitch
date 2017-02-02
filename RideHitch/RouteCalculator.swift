@@ -19,7 +19,9 @@ class RouteCalculator: NSObject {
     }
     
     var routes: [MKRoute]?
-    var routePolygonPonts: [CLLocationCoordinate2D]?
+    var routePolygonPoints: [CLLocationCoordinate2D]?
+    var routePolygonValues: [String]?
+
     var routePolygonGeohash: String?
 
     
@@ -90,13 +92,18 @@ class RouteCalculator: NSObject {
         let minY = longArray.min()! - factor
         let maxY = longArray.max()! + factor
         
+        
+        
+        
         let point1 = CLLocationCoordinate2DMake(CLLocationDegrees(minX), CLLocationDegrees(minY))
         let point2 = CLLocationCoordinate2DMake(CLLocationDegrees(maxX), CLLocationDegrees(minY))
         let point3 = CLLocationCoordinate2DMake(CLLocationDegrees(maxX), CLLocationDegrees(maxY))
         let point4 = CLLocationCoordinate2DMake(CLLocationDegrees(minX), CLLocationDegrees(maxY))
-        routePolygonPonts = [point1, point2, point3, point4]
+        routePolygonPoints = [point1, point2, point3, point4]
         
-        print(routePolygonPonts!)
+        routePolygonValues = [String(minX), String(minY), String(maxX),String(maxY)]
+        
+        print(routePolygonPoints!)
         
         self.routePolygonGeohash = Geohash.encode(latitude: point1.latitude, longitude: point1.longitude, length: 10) + "_" +
                                    Geohash.encode(latitude: point2.latitude, longitude: point2.longitude, length: 10) + "_" +

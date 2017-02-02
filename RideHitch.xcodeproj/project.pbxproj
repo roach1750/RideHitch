@@ -43,7 +43,6 @@
 		21E2E2741E131489000AAFD2 /* FBSDKCoreKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 21E2E2651E131463000AAFD2 /* FBSDKCoreKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		21E2E2751E131489000AAFD2 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21E2E2661E131463000AAFD2 /* FBSDKLoginKit.framework */; };
 		21E2E2761E131489000AAFD2 /* FBSDKLoginKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 21E2E2661E131463000AAFD2 /* FBSDKLoginKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		21E2E28E1E1314B8000AAFD2 /* TripTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E2E2871E1314B8000AAFD2 /* TripTable.swift */; };
 		21E2E2911E131590000AAFD2 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 21E2E2901E131590000AAFD2 /* libz.tbd */; };
 		21E2E2931E13159B000AAFD2 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 21E2E2921E13159B000AAFD2 /* libsqlite3.tbd */; };
 		21E2E2951E1315E5000AAFD2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E2E2941E1315E5000AAFD2 /* LoginViewController.swift */; };
@@ -114,7 +113,6 @@
 		21E2E2631E131463000AAFD2 /* CheckXcodeVersion.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = CheckXcodeVersion.sh; sourceTree = "<group>"; };
 		21E2E2651E131463000AAFD2 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		21E2E2661E131463000AAFD2 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
-		21E2E2871E1314B8000AAFD2 /* TripTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TripTable.swift; path = AmazonAws/Models/NoSQL/TripTable.swift; sourceTree = "<group>"; };
 		21E2E2901E131590000AAFD2 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		21E2E2921E13159B000AAFD2 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		21E2E2941E1315E5000AAFD2 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -287,7 +285,6 @@
 				213432C61E15BD1900E7089A /* DynamoDBInteractor.swift */,
 				211E88FA1E27044F00866FAA /* LambdaInteractor.swift */,
 				21E2E2A21E144FF0000AAFD2 /* ButtonTableViewCell.swift */,
-				21E2E2871E1314B8000AAFD2 /* TripTable.swift */,
 				21AC7BC31E399003009DED63 /* Trips.swift */,
 				211E89081E323C5500866FAA /* RealmTrip.swift */,
 				213432B81E147F4300E7089A /* RealmInteractor.swift */,
@@ -464,7 +461,6 @@
 				21A086741E3E7A8E00B379F9 /* AWSAPI_W7L04QUFUB_HitchAPIMobileHubClient.m in Sources */,
 				21AC7BC41E399003009DED63 /* Trips.swift in Sources */,
 				21E2E2A31E144FF0000AAFD2 /* ButtonTableViewCell.swift in Sources */,
-				21E2E28E1E1314B8000AAFD2 /* TripTable.swift in Sources */,
 				211E88FB1E27044F00866FAA /* LambdaInteractor.swift in Sources */,
 				213432BF1E14A1A700E7089A /* Proposer.swift in Sources */,
 				213432C51E14B08400E7089A /* ConfigureTripVC.swift in Sources */,

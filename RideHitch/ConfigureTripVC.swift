@@ -86,7 +86,6 @@ class ConfigureTripVC: UIViewController {
     }
 
     func doneButtonPressed(){
-        
         if depatureTimeTextField.isFirstResponder {
             updateTextField(datePicker: depatureTimeTextField.inputView as! UIDatePicker)
             arrivalTimeTextField.becomeFirstResponder()
@@ -95,8 +94,6 @@ class ConfigureTripVC: UIViewController {
             updateTextField(datePicker: depatureTimeTextField.inputView as! UIDatePicker)
             view.endEditing(true)
         }
-        
-        
     }
     
     func updateTextField(datePicker: UIDatePicker){

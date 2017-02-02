@@ -31,6 +31,7 @@ class Trips: AWSDynamoDBObjectModel, AWSDynamoDBModeling {
     var _originLatitude = 0.0
     var _originLongitude = 0.0
     var _originName = ""
+    var _polygon = ""
     
     class func dynamoDBTableName() -> String {
 
@@ -66,6 +67,8 @@ class Trips: AWSDynamoDBObjectModel, AWSDynamoDBModeling {
             "_originLatitude" : "originLatitude",
             "_originLongitude" : "originLongitude",
             "_originName" : "originName",
+            "_polygon" : "polygon",
+
             
         ]
     }

@@ -56,6 +56,8 @@ class AddTripWithMapVC: UIViewController, MKMapViewDelegate, UISearchBarDelegate
             let dV = segue.destination as! ConfigureTripVC
             
             let newTrip = Trips()!
+            
+            
             newTrip._creationDate = NSDate().timeIntervalSince1970 as Double
             newTrip._creatorUserID = AWSIdentityManager.defaultIdentityManager().identityId!
             newTrip._isDriver = false
@@ -68,7 +70,11 @@ class AddTripWithMapVC: UIViewController, MKMapViewDelegate, UISearchBarDelegate
             newTrip._destinationLongitude = (currentResult?.coordinate.longitude)! as Double
             newTrip._destinationName = (currentResult?.name)!
             newTrip._tripID = String(Int(arc4random()))
-//            newTrip._polygonGeohash = RouteCalculator.sharedInstance.routePolygonGeohash!
+            
+            let values = RouteCalc.routePolygonValues
+            
+            newTrip._polygon = (values?.joined(separator: ","))!
+            
             dV.trip = newTrip
         }
     }
@@ -192,7 +198,7 @@ class AddTripWithMapVC: UIViewController, MKMapViewDelegate, UISearchBarDelegate
         self.mapView.addOverlays([(route.polyline)], level: .aboveRoads)
 
         
-        let routePolygon = RouteCalc.routePolygonPonts
+        let routePolygon = RouteCalc.routePolygonPoints
         for point in routePolygon! {
             let wMA = WaypointMapAnnotation(title: nil, subtitle: nil, coordinate: CLLocationCoordinate2D(latitude: point.latitude, longitude: point.longitude), color: UIColor.green)
             self.mapView.addAnnotation(wMA)

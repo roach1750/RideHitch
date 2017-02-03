@@ -30,6 +30,7 @@
 		21AC7BC41E399003009DED63 /* Trips.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AC7BC31E399003009DED63 /* Trips.swift */; };
 		21AC7BED1E3D1B83009DED63 /* AWSCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21AC7BEC1E3D1B83009DED63 /* AWSCore.framework */; };
 		21AC7BEE1E3D1B83009DED63 /* AWSCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 21AC7BEC1E3D1B83009DED63 /* AWSCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		21DFFE481E42D40800BF2295 /* ResultsMapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21DFFE471E42D40800BF2295 /* ResultsMapVC.swift */; };
 		21E2E24D1E131437000AAFD2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E2E24C1E131437000AAFD2 /* AppDelegate.swift */; };
 		21E2E2521E131437000AAFD2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21E2E2501E131437000AAFD2 /* Main.storyboard */; };
 		21E2E2541E131437000AAFD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21E2E2531E131437000AAFD2 /* Assets.xcassets */; };
@@ -101,6 +102,7 @@
 		21AC7BC31E399003009DED63 /* Trips.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trips.swift; sourceTree = "<group>"; };
 		21AC7BE81E3D1AC7009DED63 /* AWSLambda.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AWSLambda.framework; path = "../../../../../../../Downloads/aws-ios-sdk-2/frameworks/AWSLambda.framework"; sourceTree = "<group>"; };
 		21AC7BEC1E3D1B83009DED63 /* AWSCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSCore.framework; sourceTree = "<group>"; };
+		21DFFE471E42D40800BF2295 /* ResultsMapVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsMapVC.swift; sourceTree = "<group>"; };
 		21E2E2491E131437000AAFD2 /* RideHitch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RideHitch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		21E2E24C1E131437000AAFD2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		21E2E2511E131437000AAFD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -185,6 +187,7 @@
 			children = (
 				21E2E29C1E141EA5000AAFD2 /* RideHitch.entitlements */,
 				21E2E2501E131437000AAFD2 /* Main.storyboard */,
+				21DFFE471E42D40800BF2295 /* ResultsMapVC.swift */,
 				21E2E2941E1315E5000AAFD2 /* LoginViewController.swift */,
 				21E2E29F1E143EFF000AAFD2 /* TripsViewController.swift */,
 				21E2E2A41E145564000AAFD2 /* AddTripWithMapVC.swift */,
@@ -466,6 +469,7 @@
 				213432C51E14B08400E7089A /* ConfigureTripVC.swift in Sources */,
 				213432B71E147F1000E7089A /* GooglePlaceFetcher.swift in Sources */,
 				211E89071E2F0FD900866FAA /* Geohash.swift in Sources */,
+				21DFFE481E42D40800BF2295 /* ResultsMapVC.swift in Sources */,
 				211E89091E323C5500866FAA /* RealmTrip.swift in Sources */,
 				21E2E2951E1315E5000AAFD2 /* LoginViewController.swift in Sources */,
 				21E2E24D1E131437000AAFD2 /* AppDelegate.swift in Sources */,

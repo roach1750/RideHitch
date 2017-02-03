@@ -9,10 +9,6 @@
 import UIKit
 
 class LambdaInteractor: NSObject {
-    
-    
-    
-    
 
     
     func callCloudFunction(trip: RealmTrip) {
@@ -35,6 +31,7 @@ class LambdaInteractor: NSObject {
             "originDate": trip._originDate as AnyObject,
             "originLatitude": trip._originLatitude as AnyObject,
             "originLongitude": trip._originLongitude as AnyObject,
+            "userID" : trip._creatorUserID as AnyObject,
         ]
         
         
@@ -70,11 +67,13 @@ class LambdaInteractor: NSObject {
             let result = task.result
             let responseString = String(data: (result?.responseData)!, encoding: String.Encoding.utf8)
             
+            let jsonData = self.convertToDictionary(text: responseString!)
+            
             
             
             print(result?.statusCode as Any)
             
-            print(responseString as Any)
+            print(jsonData as Any)
             
             print("This request took: \(endTime.timeIntervalSince(startTime)) seconds")
             return nil
@@ -84,7 +83,16 @@ class LambdaInteractor: NSObject {
         
     }
     
-    
+    func convertToDictionary(text: String) -> [String: Any]? {
+        if let data = text.data(using: .utf8) {
+            do {
+                return try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]
+            } catch {
+                print(error.localizedDescription)
+            }
+        }
+        return nil
+    }
     
     
     

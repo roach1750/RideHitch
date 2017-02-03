@@ -85,9 +85,9 @@ class TripsViewController: UIViewController, UITableViewDelegate, UITableViewDat
             performSegue(withIdentifier: "addNewRide", sender: nil)
         }
         else {
-            let trip = data[indexPath.section]
-            let LI = LambdaInteractor()
-            LI.callCloudFunction(trip: trip)
+//            let trip = data[indexPath.section]
+//            let LI = LambdaInteractor()
+//            LI.callCloudFunction(trip: trip)
             
 //            let DDBI = DynamoDBInteractor()
 //            DDBI.query(trip: trip)
@@ -106,6 +106,14 @@ class TripsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         let viewToReturn = UIView()
         viewToReturn.backgroundColor = UIColor.clear
         return viewToReturn
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "findMatchesSegue" {
+            let dV = segue.destination as! ResultsMapVC
+            dV.selectedTrip = data[(tableView.indexPathForSelectedRow?.section)!]
+            
+        }
     }
     
     

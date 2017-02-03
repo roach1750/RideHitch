@@ -157,6 +157,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="9xi-Yr-haM" kind="show" identifier="findMatchesSegue" id="sF4-OZ-h2A"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AddNewRideCell" rowHeight="52" id="JgH-WL-5Ag" customClass="ButtonTableViewCell" customModule="RideHitch" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="72" width="343" height="52"/>
@@ -218,6 +221,45 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V6c-hQ-1w2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2946.4000000000001" y="-350.37481259370315"/>
+        </scene>
+        <!--Title-->
+        <scene sceneID="iZq-Pf-Mla">
+            <objects>
+                <viewController id="9xi-Yr-haM" customClass="ResultsMapVC" customModule="RideHitch" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="db2-Fl-J5D"/>
+                        <viewControllerLayoutGuide type="bottom" id="N2g-gv-Kub"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="CNS-Ab-LPy">
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="c5b-sh-BBC">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="562"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="c5b-sh-BBC" firstAttribute="top" secondItem="db2-Fl-J5D" secondAttribute="bottom" id="OA9-Iu-mpu"/>
+                            <constraint firstAttribute="bottom" secondItem="c5b-sh-BBC" secondAttribute="bottom" constant="41" id="OJM-Sn-sC3"/>
+                            <constraint firstAttribute="trailing" secondItem="c5b-sh-BBC" secondAttribute="trailing" id="TSl-Ev-pAw"/>
+                            <constraint firstItem="c5b-sh-BBC" firstAttribute="leading" secondItem="CNS-Ab-LPy" secondAttribute="leading" id="mzq-5w-JNP"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="9ep-1Z-rZY">
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="N7C-LW-0sQ">
+                            <connections>
+                                <action selector="refresh:" destination="9xi-Yr-haM" id="F67-TW-pDv"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="mapView" destination="c5b-sh-BBC" id="Vn0-Xu-43y"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j0T-C6-T0n" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3813.5999999999999" y="-1116.7916041979011"/>
         </scene>
         <!--Add New Ride-->
         <scene sceneID="Znm-Ni-urM">
@@ -420,7 +462,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tud-Ly-PIR" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Add New" id="eYg-AN-tGU"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="51X-pP-EhJ">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="51X-pP-EhJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

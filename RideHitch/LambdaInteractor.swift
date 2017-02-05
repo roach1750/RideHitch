@@ -68,12 +68,47 @@ class LambdaInteractor: NSObject {
             let responseString = String(data: (result?.responseData)!, encoding: String.Encoding.utf8)
             
             let jsonData = self.convertToDictionary(text: responseString!)
-            
-            
-            
             print(result?.statusCode as Any)
             
-            print(jsonData as Any)
+            
+            let items = jsonData!["Items"]! as! NSArray
+            
+//            print(items)
+            
+            for i in 0...items.count {
+                
+                let jsonTrip = items[i] as! Dictionary<String, Any> 
+
+                let trip = RealmTrip()
+                trip._geohash = (jsonTrip["geohash"]! as! Dictionary<String, Any>)["S"] as! String
+                trip._tripID =  (jsonTrip["tripID"]! as! Dictionary<String, Any>)["S"] as! String
+                trip._creationDate = Double((jsonTrip["creationDate"]! as! Dictionary<String, Any>)["N"] as! String)!
+                trip._creatorUserID = (jsonTrip["creatorUserID"]! as! Dictionary<String, Any>)["S"] as! String
+                
+                trip._destinationDate = Double((jsonTrip["destinationDate"]! as! Dictionary<String, Any>)["N"] as! String)!
+                trip._destinationLatitude = Double((jsonTrip["destinationLatitude"]! as! Dictionary<String, Any>)["N"] as! String)!
+                trip._destinationLongitude = Double((jsonTrip["destinationLongitude"]! as! Dictionary<String, Any>)["N"] as! String)!
+                
+                trip._destinationName = (jsonTrip["destinationName"]! as! Dictionary<String, Any>)["S"] as! String
+                
+                
+//                trip._isDriver =  Bool(NSNumber(value: (jsonTrip["isDriver"]! as! Dictionary<String, Any>)["BOOL"] as! Double))
+//                trip._isMatched = Bool(NSNumber(value: (jsonTrip["isMatched"]! as! Dictionary<String, Any>)["BOOL"] as! Double))
+                
+                trip._originDate = Double((jsonTrip["originDate"]! as! Dictionary<String, Any>)["N"] as! String)!
+                trip._originLatitude = Double((jsonTrip["originLatitude"]! as! Dictionary<String, Any>)["N"] as! String)!
+                trip._originLongitude = Double((jsonTrip["originLongitude"]! as! Dictionary<String, Any>)["N"] as! String)!
+                
+                trip._originName = (jsonTrip["originName"]! as! Dictionary<String, Any>)["S"] as! String
+                trip._polygon = (jsonTrip["polygon"]! as! Dictionary<String, Any>)["S"] as! String
+
+                print(trip)
+            }
+            
+            
+            
+            
+            
             
             print("This request took: \(endTime.timeIntervalSince(startTime)) seconds")
             return nil
@@ -93,7 +128,10 @@ class LambdaInteractor: NSObject {
         }
         return nil
     }
+
     
+    
+
     
     
     

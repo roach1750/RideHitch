@@ -21,6 +21,7 @@
 		213432C31E14A2CA00E7089A /* Arlington.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 213432C21E14A2CA00E7089A /* Arlington.gpx */; };
 		213432C51E14B08400E7089A /* ConfigureTripVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213432C41E14B08400E7089A /* ConfigureTripVC.swift */; };
 		213432C71E15BD1900E7089A /* DynamoDBInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213432C61E15BD1900E7089A /* DynamoDBInteractor.swift */; };
+		216CAAEE1E4AB2B700546E7D /* AcceptMatchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216CAAED1E4AB2B700546E7D /* AcceptMatchVC.swift */; };
 		21A0866B1E3E7A4200B379F9 /* AWSConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A086671E3E7A4200B379F9 /* AWSConfiguration.swift */; };
 		21A0866C1E3E7A4200B379F9 /* AWSMobileClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A086681E3E7A4200B379F9 /* AWSMobileClient.swift */; };
 		21A0866D1E3E7A4200B379F9 /* AWSMobileHubHelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21A086691E3E7A4200B379F9 /* AWSMobileHubHelper.framework */; };
@@ -89,6 +90,7 @@
 		213432C21E14A2CA00E7089A /* Arlington.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Arlington.gpx; sourceTree = "<group>"; };
 		213432C41E14B08400E7089A /* ConfigureTripVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigureTripVC.swift; sourceTree = "<group>"; };
 		213432C61E15BD1900E7089A /* DynamoDBInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamoDBInteractor.swift; sourceTree = "<group>"; };
+		216CAAED1E4AB2B700546E7D /* AcceptMatchVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcceptMatchVC.swift; sourceTree = "<group>"; };
 		21A086671E3E7A4200B379F9 /* AWSConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AWSConfiguration.swift; sourceTree = "<group>"; };
 		21A086681E3E7A4200B379F9 /* AWSMobileClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AWSMobileClient.swift; sourceTree = "<group>"; };
 		21A086691E3E7A4200B379F9 /* AWSMobileHubHelper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSMobileHubHelper.framework; sourceTree = "<group>"; };
@@ -187,11 +189,12 @@
 			children = (
 				21E2E29C1E141EA5000AAFD2 /* RideHitch.entitlements */,
 				21E2E2501E131437000AAFD2 /* Main.storyboard */,
-				21DFFE471E42D40800BF2295 /* ResultsMapVC.swift */,
 				21E2E2941E1315E5000AAFD2 /* LoginViewController.swift */,
-				21E2E29F1E143EFF000AAFD2 /* TripsViewController.swift */,
 				21E2E2A41E145564000AAFD2 /* AddTripWithMapVC.swift */,
+				21E2E29F1E143EFF000AAFD2 /* TripsViewController.swift */,
 				213432C41E14B08400E7089A /* ConfigureTripVC.swift */,
+				21DFFE471E42D40800BF2295 /* ResultsMapVC.swift */,
+				216CAAED1E4AB2B700546E7D /* AcceptMatchVC.swift */,
 				21E2E2A11E144F26000AAFD2 /* Model */,
 				21E2E2991E1316BE000AAFD2 /* AWS */,
 				21E2E24C1E131437000AAFD2 /* AppDelegate.swift */,
@@ -478,6 +481,7 @@
 				21A086761E3E7A8E00B379F9 /* AWSAPI_W7L04QUFUB_ResponseSchema.m in Sources */,
 				213432BD1E14A19500E7089A /* WaypointMapAnnotation.swift in Sources */,
 				21E2E2A51E145564000AAFD2 /* AddTripWithMapVC.swift in Sources */,
+				216CAAEE1E4AB2B700546E7D /* AcceptMatchVC.swift in Sources */,
 				21E2E29E1E143B37000AAFD2 /* Constants.swift in Sources */,
 				213432BB1E147F4300E7089A /* FavoritePlace.swift in Sources */,
 				21E2E2A01E143EFF000AAFD2 /* TripsViewController.swift in Sources */,

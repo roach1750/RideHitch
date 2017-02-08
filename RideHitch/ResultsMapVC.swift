@@ -9,23 +9,45 @@
 import UIKit
 import MapKit
 
-class ResultsMapVC: UIViewController {
+class ResultsMapVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     var selectedTrip: RealmTrip?
+    var potentialTrips: [RealmTrip]?
     
     @IBOutlet weak var mapView: MKMapView!
+    
+    @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
     
         self.title = selectedTrip?._destinationName
         super.viewDidLoad()
         addTripToMap(trip: self.selectedTrip!)
-
-    }
-    @IBAction func refresh(_ sender: UIBarButtonItem) {
         
         let LI = LambdaInteractor()
-        LI.callCloudFunction(trip: selectedTrip!)
+        LI.callCloudFunction(trip: selectedTrip!) { results in
+            
+            self.potentialTrips = results
+            self.tableView.reloadData()
+            
+        }
+    }
+    
+    @IBAction func refresh(_ sender: UIBarButtonItem) {
+        let LI = LambdaInteractor()
+        
+        LI.callCloudFunction(trip: selectedTrip!) { results in
+            
+            
+            self.potentialTrips = results
+            self.tableView.reloadData()
+        
+        }
+        
+        
+        
+        
+        
         
     }
 
@@ -41,7 +63,47 @@ class ResultsMapVC: UIViewController {
     }
     
     
+    ///////////TABLEVIEW
     
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        if potentialTrips != nil {
+        
+            return (potentialTrips?.count)!
+        
+        }
+        
+        return 0
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "potentialMatchCell", for: indexPath)
+        let trip = potentialTrips?[indexPath.row]
+        
+        cell.textLabel?.text = trip?._destinationName
+        cell.detailTextLabel?.text = "Creator ID: "  + (trip?._creatorUserID)!
+        
+        return cell
+        
+        
+        
+        
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    ////////////////MAP VIEW
     
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView?
     {

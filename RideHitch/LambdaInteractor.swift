@@ -11,7 +11,7 @@ import UIKit
 class LambdaInteractor: NSObject {
 
     
-    func callCloudFunction(trip: RealmTrip) {
+    func callCloudFunction(trip: RealmTrip, completion: @escaping ([RealmTrip]?) -> Void) {
         
         let httpMethodName = "POST"
         let URLString = "/items"
@@ -75,7 +75,12 @@ class LambdaInteractor: NSObject {
             
 //            print(items)
             
-            for i in 0...items.count {
+            
+            var results = [RealmTrip]()
+            
+            for i in 0..<items.count {
+                
+                print(i)
                 
                 let jsonTrip = items[i] as! Dictionary<String, Any> 
 
@@ -102,9 +107,19 @@ class LambdaInteractor: NSObject {
                 trip._originName = (jsonTrip["originName"]! as! Dictionary<String, Any>)["S"] as! String
                 trip._polygon = (jsonTrip["polygon"]! as! Dictionary<String, Any>)["S"] as! String
 
-                print(trip)
+            //    print(trip)
+                
+                results.append(trip)
+                
+            
             }
             
+            
+            print(results)
+            
+            DispatchQueue.main.async {
+                completion(results)
+            }
             
             
             

@@ -107,31 +107,24 @@ class LambdaInteractor: NSObject {
                 trip._originName = (jsonTrip["originName"]! as! Dictionary<String, Any>)["S"] as! String
                 trip._polygon = (jsonTrip["polygon"]! as! Dictionary<String, Any>)["S"] as! String
 
-            //    print(trip)
                 
                 results.append(trip)
                 
-            
             }
-            
             
             print(results)
             
             DispatchQueue.main.async {
                 completion(results)
             }
-            
-            
-            
-            
-            
-            print("This request took: \(endTime.timeIntervalSince(startTime)) seconds")
+                        print("This request took: \(endTime.timeIntervalSince(startTime)) seconds")
             return nil
         })
         
         
         
     }
+    
     
     func convertToDictionary(text: String) -> [String: Any]? {
         if let data = text.data(using: .utf8) {
@@ -144,6 +137,75 @@ class LambdaInteractor: NSObject {
         return nil
     }
 
+    
+    
+    
+    ///need to call the other cloud function with requestedTripID and requestedTripID
+    
+    func callMatchFuction(usersTrip: RealmTrip, matchedTrip: RealmTrip) {
+        
+        let httpMethodName = "POST"
+        let URLString = "/matches"
+        let queryStringParameters = ["key1":"value1"]
+        let headerParameters = [
+            "Content-Type": "application/json",
+            "Accept": "application/json"
+        ]
+        
+        let date = NSDate().timeIntervalSince1970
+        
+        let jsonObject: [String: AnyObject] = [
+            "requestedTripID": matchedTrip._tripID as AnyObject,
+            "requesterTripID": usersTrip._tripID as AnyObject,
+            "creationDate": date as AnyObject
+        ]
+        
+        
+        // Construct the request object
+        let apiRequest = AWSAPIGatewayRequest(httpMethod: httpMethodName,
+                                              urlString: URLString,
+                                              queryParameters: queryStringParameters,
+                                              headerParameters: headerParameters,
+                                              httpBody: jsonObject)
+    
+        let invocationClient = AWSAPI_W7L04QUFUB_HitchAPIMobileHubClient.init(forKey: AWSCloudLogicDefaultConfigurationKey)
+        
+        
+        invocationClient.invoke(apiRequest).continue({(task: AWSTask) -> AnyObject? in
+           
+            if let error = task.error {
+                print("Error occurred: \(error)")
+                // Handle error here
+                return nil
+            }
+            
+            if let exception = task.exception {
+                print("Exception Occurred: \(exception)")
+                // Handle exception here
+                return nil
+            }
+            
+            // Handle successful result here
+            let result = task.result
+            let responseString = String(data: (result?.responseData)!, encoding: String.Encoding.utf8)
+            
+            let jsonData = self.convertToDictionary(text: responseString!)
+            
+            print(result?.statusCode as Any)
+            
+            
+            return nil
+            
+        })
+    
+    
+    
+    
+    
+    
+    
+    }
+    
     
     
 

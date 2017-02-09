@@ -79,15 +79,9 @@ class ResultsMapVC: UIViewController, UITableViewDelegate, UITableViewDataSource
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "potentialMatchCell", for: indexPath)
         let trip = potentialTrips?[indexPath.row]
-        
         cell.textLabel?.text = trip?._destinationName
         cell.detailTextLabel?.text = "Creator ID: "  + (trip?._creatorUserID)!
-        
         return cell
-        
-        
-        
-        
     }
     
     
@@ -126,5 +120,18 @@ class ResultsMapVC: UIViewController, UITableViewDelegate, UITableViewDataSource
     }
     
     
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "selectTripSegue" {
+            let dV = segue.destination as! AcceptMatchVC
+            dV.selectedTrip = self.selectedTrip
+            let indexPath = tableView.indexPathForSelectedRow
+            let trip = potentialTrips?[(indexPath?.row)!]
+            dV.matchedTrip = trip
+            
+            
+        }
+        
+    }
 
 }

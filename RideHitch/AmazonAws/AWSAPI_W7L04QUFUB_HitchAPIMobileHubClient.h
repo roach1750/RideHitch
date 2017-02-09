@@ -167,6 +167,14 @@ NS_ASSUME_NONNULL_BEGIN
  */
 + (void)removeClientForKey:(NSString *)key;
 
+/**
+ 
+ 
+ 
+ return type: 
+ */
+- (AWSTask *)matchesGet;
+
 @end
 
 NS_ASSUME_NONNULL_END

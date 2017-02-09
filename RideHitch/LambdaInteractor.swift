@@ -144,7 +144,7 @@ class LambdaInteractor: NSObject {
     
     func callMatchFuction(usersTrip: RealmTrip, matchedTrip: RealmTrip) {
         
-        let httpMethodName = "POST"
+        let httpMethodName = "PUT"
         let URLString = "/matches"
         let queryStringParameters = ["key1":"value1"]
         let headerParameters = [
